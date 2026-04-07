@@ -8,6 +8,23 @@ import { buildIcs, googleCalendarUrl } from './lib/calendar'
 import { Modal } from './components/Modal'
 import { useInstallPrompt } from './hooks/useInstallPrompt'
 
+// Analytics Helper
+declare global {
+  interface Window {
+    gtag?: (command: string, action: string, params?: any) => void
+  }
+}
+
+const trackEvent = (action: string, category: string, label: string, value?: number) => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', action, {
+      event_category: category,
+      event_label: label,
+      value: value
+    })
+  }
+}
+
 function cssVar(name: string, value: string): CSSProperties {
   return { [name]: value } as unknown as CSSProperties
 }
@@ -112,7 +129,15 @@ function App() {
   }, [favoritesOnly])
 
   const toggleFavorite = (id: string) => {
-    setFavoriteIds((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]))
+    setFavoriteIds((prev) => {
+      if (prev.includes(id)) {
+        trackEvent('remove_favorite', 'Interaction', `Event ID: ${id}`)
+        return prev.filter((x) => x !== id)
+      } else {
+        trackEvent('add_favorite', 'Interaction', `Event ID: ${id}`)
+        return [...prev, id]
+      }
+    })
   }
 
   const categories = useMemo(() => {
@@ -176,6 +201,7 @@ function App() {
   )
 
   const downloadAppleCalendar = (event: EventItem) => {
+    trackEvent('download_apple_calendar', 'Calendar', `Event ID: ${event.id}`)
     const ics = buildIcs(event)
     if (!ics) return
     const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' })
@@ -271,10 +297,12 @@ function App() {
   }
 
   const shareApp = async () => {
+    trackEvent('share_app', 'Share', 'App')
     await shareUrl(window.location.origin + window.location.pathname, 'SJ, Aquí 26', 'Compartir la app')
   }
 
   const shareEvent = async (event: EventItem) => {
+    trackEvent('share_event', 'Share', `Event ID: ${event.id}`)
     const url = new URL(window.location.origin + window.location.pathname)
     url.searchParams.set('event', event.id)
     await shareUrl(url.toString(), `SJ, Aquí · ${event.title}`, event.artist ?? undefined)
@@ -293,6 +321,7 @@ function App() {
                 onClick={() => {
                   setShowInfo(false)
                   setTab('agenda')
+                  trackEvent('switch_tab', 'Navigation', 'Agenda')
                 }}
                 role="tab"
                 aria-selected={tab === 'agenda'}
@@ -305,6 +334,7 @@ function App() {
                 onClick={() => {
                   setShowInfo(false)
                   setTab('mapas')
+                  trackEvent('switch_tab', 'Navigation', 'Mapas')
                 }}
                 role="tab"
                 aria-selected={tab === 'mapas'}
@@ -477,7 +507,15 @@ function App() {
                     const gcal = googleCalendarUrl(e)
                     const isFav = favorites.has(e.id)
                     return (
-                      <article key={e.id} className="listItem" style={cssVar('--cat', meta.color)} onClick={() => setSelectedEventId(e.id)}>
+                      <article
+                        key={e.id}
+                        className="listItem"
+                        style={cssVar('--cat', meta.color)}
+                        onClick={() => {
+                          setSelectedEventId(e.id)
+                          trackEvent('view_event', 'Interaction', `Event ID: ${e.id}`)
+                        }}
+                      >
                         <div className="itemTop">
                           <div className="catLine">
                             <span className="catDot" aria-hidden="true"></span>
@@ -542,8 +580,14 @@ function App() {
                                 rel="noreferrer"
                                 aria-label="Agregar a Google Calendar"
                                 title="Agregar a Google Calendar"
-                                onClick={(ev) => ev.stopPropagation()}
-                                onTouchEnd={(ev) => ev.stopPropagation()}
+                                onClick={(ev) => {
+                                  ev.stopPropagation()
+                                  trackEvent('open_google_calendar', 'Calendar', `Event ID: ${e.id}`)
+                                }}
+                                onTouchEnd={(ev) => {
+                                  ev.stopPropagation()
+                                  trackEvent('open_google_calendar', 'Calendar', `Event ID: ${e.id}`)
+                                }}
                               >
                                 <Calendar size={18} />
                               </a>
@@ -709,6 +753,7 @@ function App() {
                   rel="noreferrer"
                   aria-label="Agregar a Google Calendar"
                   title="Agregar a Google Calendar"
+                  onClick={() => trackEvent('open_google_calendar', 'Calendar', `Event ID: ${selectedEvent.id}`)}
                 >
                   <Calendar size={18} />
                 </a>
