@@ -8,27 +8,35 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'apple-touch-icon.png'],
+      includeAssets: ['favicon.svg', 'icons.svg'],
       manifest: {
-        name: 'Transitarte · Guía del Festival',
-        short_name: 'Transitarte',
+        name: 'Transitarte 26',
+        short_name: 'Transitarte 26',
         description:
           'Agenda interactiva, búsqueda, filtros, mapas y acceso rápido para guardar eventos en tu calendario.',
-        theme_color: '#0b1220',
-        background_color: '#0b1220',
+        theme_color: '#600177',
+        background_color: '#ffffff',
         display: 'standalone',
         start_url: '/',
         icons: [
           {
-            src: '/pwa-192.png',
+            src: '/icons.svg',
             sizes: '192x192',
-            type: 'image/png',
+            type: 'image/svg+xml',
+            purpose: 'any'
           },
           {
-            src: '/pwa-512.png',
+            src: '/icons.svg',
             sizes: '512x512',
-            type: 'image/png',
+            type: 'image/svg+xml',
+            purpose: 'maskable'
           },
+          {
+            src: '/icons.svg',
+            sizes: 'any',
+            type: 'image/svg+xml',
+            purpose: 'any'
+          }
         ],
       },
       workbox: {
