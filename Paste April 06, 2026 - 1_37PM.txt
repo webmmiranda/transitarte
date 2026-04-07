@@ -1,0 +1,342 @@
+¡Claro que sí! He analizado todas las páginas del programa y he unificado los diferentes formatos (Música, Talleres, Cine, etc.) en una **sola base de datos homogénea**. 
+
+He definido las siguientes columnas para que la información tenga sentido en un formato Excel:
+1. **Categoría Principal:** (Música, Talleres, Mercados, Literatura, Artes Escénicas, etc.)
+2. **Fecha:** Día del evento.
+3. **Lugar / Espacio:** Parque o tarima específica.
+4. **Horario:** Hora de inicio (y fin, si aplica).
+5. **Actividad / Nombre del Evento:** Qué se va a hacer.
+6. **Artista / Grupo / Encargado:** Quién imparte o se presenta.
+7. **Género / Subcategoría / Descripción:** Detalle del tipo de música, taller, o sinopsis.
+8. **Público Dirigido / Observaciones:** Edades, requisitos de inscripción, etc.
+
+### Programación Homogenizada - Transitarte 
+
+| Categoría Principal | Fecha | Lugar / Espacio | Horario | Actividad / Nombre del Evento | Artista / Grupo / Encargado | Género / Subcategoría / Descripción | Público Dirigido / Observaciones |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Música** | Viernes 10 | Parque Nacional (Tarima Música) | 11:20 a.m. | Concierto | Fabián Castillo DJ | Electrónica | Todo público |
+| **Música** | Viernes 10 | Parque Nacional (Tarima Música) | 1:10 p.m. | Concierto | Kawe Calypso Band | Calypso tradicional afrolimonense | Todo público |
+| **Música** | Viernes 10 | Parque Nacional (Tarima Música) | 2:40 p.m. | Concierto | Balele Mendé CR | Ritmos tradicionales del oeste africano | Ensamble percusión y danza |
+| **Música** | Viernes 10 | Parque Nacional (Tarima Música) | 3:55 p.m. | Concierto | Earthstrong | Reggae | Todo público |
+| **Música** | Viernes 10 | Parque Nacional (Tarima Música) | 5:15 p.m. | Concierto | Fercho Salazar | Indie Dance, Afro House, Downtempo | Todo público |
+| **Música** | Viernes 10 | Parque Nacional (Tarima Música) | 7:15 p.m. | Concierto | Los Ajenos | Fusión latino pop bailable | Todo público |
+| **Música** | Viernes 10 | Parque Morazán (Tarima Música) | 1:15 p.m. | Concierto | Buena Suerte | Punk rock ska | Todo público |
+| **Música** | Viernes 10 | Parque Morazán (Tarima Música) | 2:45 p.m. | Concierto | Fogonazo | Jazz contemporáneo | Todo público |
+| **Música** | Viernes 10 | Parque Morazán (Tarima Música) | 4:15 p.m. | Concierto | GADEA | House – Groovy – Funky House | Todo público |
+| **Música** | Viernes 10 | Parque Morazán (Tarima Música) | 6:00 p.m. | Concierto | Palu Santo | Electronic World Music | Todo público |
+| **Música** | Viernes 10 | Parque Morazán (Tarima Música) | 8:00 p.m. | Concierto | Peregrino Gris | Música folk y celta original | Todo público |
+| **Música** | Sábado 11 | Parque Nacional (Tarima Música) | 11:15 a.m. | Concierto | La pájara pinta | Infantil | Todo público |
+| **Música** | Sábado 11 | Parque Nacional (Tarima Música) | 12:40 a.m. | Concierto | Mirar las flores | Fusión Latina | Todo público |
+| **Música** | Sábado 11 | Parque Nacional (Tarima Música) | 2:00 p.m. | Concierto | Elena y la Orquesta Lunar | World Music / Mundo Fusión | Todo público |
+| **Música** | Sábado 11 | Parque Nacional (Tarima Música) | 4:00 p.m. | Concierto | Nakury | Hip Hop Fusión tropical | Todo público |
+| **Música** | Sábado 11 | Parque Nacional (Tarima Música) | 5:40 p.m. | Concierto | Chillax | Tropical pop | Todo público |
+| **Música** | Sábado 11 | Parque Nacional (Tarima Música) | 7:10 p.m. | Concierto | Malpaís | Folk costarricense | Todo público |
+| **Música** | Sábado 11 | Parque Morazán (Tarima Música) | 11:00 a.m. | Concierto | Antorcha Peregrina / Cantata | Folclor, cantata histórica | Todo público |
+| **Música** | Sábado 11 | Parque Morazán (Tarima Música) | 12:55 p.m. | Concierto | ACACIA | Fusión | Todo público |
+| **Música** | Sábado 11 | Parque Morazán (Tarima Música) | 2:35 p.m. | Concierto | Reserva Fantasma | Electro-tropical ecléctico | Todo público |
+| **Música** | Sábado 11 | Parque Morazán (Tarima Música) | 4:20 p.m. | Concierto | Amarillo Cian y Magenta | Instrumental original costarricense | Todo público |
+| **Música** | Sábado 11 | Parque Morazán (Tarima Música) | 6:10 p.m. | Concierto | TURNSTONES | Rock, Rock alternativo | Todo público |
+| **Música** | Sábado 11 | Parque Morazán (Tarima Música) | 7:40 p.m. | Concierto | Los Garbanzos | Rock latino / Ska / Fusión latina | Todo público |
+| **Música** | Sábado 11 | Parque España / Corredor Literario | 3:00 p.m. | Concierto | Henry del Toro | Pop Clásico - Easy Listening | Todo público |
+| **Danza / Baile** | Sábado 11 | Tarima del Swing | 11:00 a.m. | Taller de Bolero Criollo Principiantes | No especificado | Baile | Todo Público |
+| **Danza / Baile** | Sábado 11 | Tarima del Swing | 12:00 p.m. | Taller de Niñez | No especificado | Baile | Niñez |
+| **Danza / Baile** | Sábado 11 | Tarima del Swing | 1:00 p.m. | Taller de Swing Criollo Principiantes | No especificado | Baile | Todo Público |
+| **Danza / Baile** | Sábado 11 | Tarima del Swing | 2:00 p.m. | Taller Swing Criollo Intermedios | No especificado | Baile | Todo Público |
+| **Danza / Baile** | Sábado 11 | Tarima del Swing | 3:00 p.m. | Taller Bolero Criollo Intermedios | No especificado | Baile | Todo Público |
+| **Danza / Baile** | Sábado 11 | Tarima del Swing | 4:00 p.m. | Espectáculo | No especificado | Baile | Todo Público |
+| **Danza / Baile** | Sábado 11 | Tarima del Swing | 5:30 p.m. | Concurso de baile | Presentación participantes y semifinal | Swing y bolero criollos | Jóvenes y adultas |
+| **Danza / Baile** | Sábado 11 | Tarima del Swing | 6:30 p.m. | Noche Bailable | No especificado | Swing y Bolero Criollos | Todo Público |
+| **Música** | Domingo 12 | Parque Nacional (Tarima Música) | 11:00 a.m. | Concierto | Junior y sus Calypsonians | Calypso | Todo público |
+| **Música** | Domingo 12 | Parque Nacional (Tarima Música) | 12:30 p.m. | Concierto | Adiós Cometa | Rock alternativo | Todo público |
+| **Música** | Domingo 12 | Parque Nacional (Tarima Música) | 2:50 p.m. | Concierto | República Fortuna | Fusión Ska | Todo público |
+| **Música** | Domingo 12 | Parque Nacional (Tarima Música) | 4:10 p.m. | Concierto | Sonámbulo Psicotropical | Psicotropical | Todo público |
+| **Música** | Domingo 12 | Parque Nacional (Tarima Música) | 6:10 p.m. | Concierto | Banda El Chiqui Chiqui | Cumbia, merengue, salsa, boleros | Todo público |
+| **Música** | Domingo 12 | Parque Morazán (Tarima Música) | 11:00 a.m. | Concierto | Maple | Jazz contemporáneo, fusiones blues/funk | Todo público |
+| **Música** | Domingo 12 | Parque Morazán (Tarima Música) | 12:30 p.m. | Concierto | La versión extendida de las cosas | Indie rock pop | Todo público |
+| **Música** | Domingo 12 | Parque Morazán (Tarima Música) | 2:00 p.m. | Concierto | Gentry | Hard rock | Todo público |
+| **Música** | Domingo 12 | Parque Morazán (Tarima Música) | 3:30 p.m. | Concierto | Elektra Stroke | Rock Alternativo/New wave | Todo público |
+| **Música** | Domingo 12 | Parque Morazán (Tarima Música) | 5:00 p.m. | Concierto | Instrovisión | Rock Progresivo | Todo público |
+| **Música** | Domingo 12 | Parque Morazán (Tarima Música) | 6:30 p.m. | Concierto | TIMES FORGOTTEN | Rock progresivo | Todo público |
+| **Música** | Domingo 12 | Parque España / Corredor Literario | 3:00 p.m. | Concierto | Arygu | Rock/pop alternativo | Todo público |
+| **Danza / Baile** | Domingo 12 | Tarima del Swing | 11:00 a.m. | Taller Swing y Bolero Criollos | No especificado | Baile | Adultos mayores |
+| **Danza / Baile** | Domingo 12 | Tarima del Swing | 12:00 p.m. | Taller de Swing Criollo Fusión Urbano | No especificado | Baile | Todo Público |
+| **Danza / Baile** | Domingo 12 | Tarima del Swing | 1:00 p.m. | Presentaciones Artísticas | No especificado | Baile | Todo Público |
+| **Danza / Baile** | Domingo 12 | Tarima del Swing | 2:00 p.m. | Taller de Swing y Bolero Criollo Principiantes | No especificado | Baile | Todo Público |
+| **Danza / Baile** | Domingo 12 | Tarima del Swing | 3:00 p.m. | Taller de Swing y Bolero Criollo Intermedios | No especificado | Baile | Todo Público |
+| **Danza / Baile** | Domingo 12 | Tarima del Swing | 4:00 p.m. | Espectáculo | No especificado | Baile | Todo Público |
+| **Danza / Baile** | Domingo 12 | Tarima del Swing | 5:00 p.m. | Concurso de baile | Final ambas categorías | Swing y bolero criollos | Jóvenes y adultos |
+| **Danza / Baile** | Domingo 12 | Tarima del Swing | 6:00 p.m. | Noche Bailable | No especificado | Swing y el Bolero Criollos | Todo Público |
+| **Talleres** | Viernes 10 | Parque Morazán (Toldo #2) | 1:00 p.m. - 1:40 p.m. | Técnica decoupage sobre velas | Runia Elizondo Rojas | Manualidades | De 8 años a +65. Fichas 30 min antes. Cupo limitado. |
+| **Talleres** | Viernes 10 | Parque Morazán (Toldo #1) | 2:00 p.m. - 2:45 p.m. | Caricaturas de nuestras tradiciones | Alejandro Hernández Rojas | Mascaradas y leyendas | De 6 a 18 años. Fichas 30 min antes. |
+| **Talleres** | Viernes 10 | Parque Morazán (Toldo #3) | 2:00 p.m. - 4:00 p.m. | Pintando figuras de 3D | Xochilt Vanessa Salgado | Cerditos o conejitos | De 5 a 12 años. Fichas 30 min antes. |
+| **Talleres** | Viernes 10 | Parque Morazán (Toldo #4) | 2:15 p.m. - 3:30 p.m. | Taller porcelana fría | Fabiola Valerín Rojas | Lapicero símbolos de San José | De 7 años a +65. Fichas 30 min antes. |
+| **Talleres** | Viernes 10 | Parque Morazán (Toldo #2) | 2:15 p.m. - 3:45 p.m. | Taller pinta a tu mascota | Patrizia Gallo | Pintura | De 10 años a +65. Fichas 30 min antes. |
+| **Talleres** | Viernes 10 | Parque Morazán (Toldo #1) | 3:00 p.m. - 4:00 p.m. | ¡Pinta y diseña tu estilo único! | Alejandro Hernández Rojas | Pintura en tote bag | De 15 años en adelante. Fichas 30 min antes. |
+| **Talleres** | Viernes 10 | Parque Morazán (Toldo #4) | 4:00 p.m. - 6:00 p.m. | Taller principiantes tejido Amigurumi | Nicole Vanessa Chaves Mora | Tejido | De 10 años a +65. Fichas 30 min antes. |
+| **Talleres** | Viernes 10 | Parque Morazán (Toldo #1) | 4:15 p.m. - 5:15 p.m. | Arte y pintura de la cultura Geek | Alejandro Hernández Rojas | Pintura | De 12 años a +65. Fichas 30 min antes. |
+| **Talleres** | Viernes 10 | Parque Morazán (Toldo #2) | 4:30 p.m. - 5:30 p.m. | Pintura sobre salveques de tela | Runia Elizondo Rojas | Pintura niños | De 8 a 12 años. Fichas 30 min antes. |
+| **Talleres** | Viernes 10 | Parque Morazán (Toldo #3) | 5:00 p.m. - 8:00 p.m. | Taller creativo de pintura en piedra | Xochilt Vanessa Salgado | Pintura | De 7 años en adelante. Fichas 30 min antes. |
+| **Talleres** | Viernes 10 | Parque Morazán (Toldo #1) | 5:45 p.m. - 6:45 p.m. | Arte en mini lienzos | Johanna Ríos Madrigal | Pintura | De 5 años a +65. Fichas 30 min antes. |
+| **Talleres** | Viernes 10 | Parque Morazán (Toldo #2) | 6:00 p.m. - 7:00 p.m. | Taller incrustación en velas | Runia Elizondo Rojas | Manualidades | De 13 a 85 años. Fichas 30 min antes. |
+| **Talleres** | Viernes 10 | Parque Morazán (Toldo #4) | 6:30 p.m. - 8:30 p.m. | Arteterapia By Artesanías Swan | Maria Jose Rivera Gutiérrez | Arteterapia | A partir de 6 años. Fichas 30 min antes. |
+| **Talleres** | Viernes 10 | Parque Morazán (Toldo #1) | 7:00 p.m. - 8:30 p.m. | Taller de atrapasueños | Johanna Ríos Madrigal | Manualidades | De 10 años a +65. Fichas 30 min antes. |
+| **Talleres** | Viernes 10 | Parque Morazán (Toldo #2) | 7:20 p.m. - 8:20 p.m. | Pintura sobre bolsos: técnico Brito | Runia Elizondo Rojas | Pintura | De 10 años a +65. Fichas 30 min antes. |
+| **Talleres** | Sábado 11 | Parque Morazán (Toldo #1) | 11:00 a.m. - 12:00 m.d. | El placer de pintar paisajes | Andrea Araya Guerra | Pintura | Todo público. Fichas 30 min antes. |
+| **Talleres** | Sábado 11 | Parque Morazán (Toldo #2) | 11:00 a.m. - 12:00 m.d. | Taller de slime | Arti Sur | Manualidades | De 3 años en adelante. Fichas 30 min antes. |
+| **Talleres** | Sábado 11 | Parque Morazán (Toldo #3) | 11:00 a.m. - 8:00 p.m. | Toldo interactivo | Brahma Kumaris | Enfocá tu mente y vibrá paz | Todo público. Fichas 30 min antes. |
+| **Talleres** | Sábado 11 | Parque Morazán (Toldo #4) | 11:00 a.m. - 12:30 m.d. | Máscara modelada en arcilla | ANESCO | Modelado | De 12 años a +65. Fichas 30 min antes. |
+| **Talleres** | Sábado 11 | Parque Morazán (Toldo #1) | 12:30 m.d. - 2:00 p.m. | Escultura personajes creativos | Andrea Araya Guerra | Escultura | Mayores de 7 años. Fichas 30 min antes. |
+| **Talleres** | Sábado 11 | Parque Morazán (Toldo #2) | 1:00 p.m. - 2:00 p.m. | Taller de porcelana fría | Arti Sur | Manualidades | De 12 años a +65. Fichas 30 min antes. |
+| **Talleres** | Sábado 11 | Parque Morazán (Toldo #4) | 1:15 p.m. - 2:15 p.m. | Lienzo Vivo | Fabiola Valerín Rojas | "Pinta lo que San José Siente por Ti" | De 6 años a +65. Fichas 30 min antes. |
+| **Talleres** | Sábado 11 | Parque Morazán (Área Verde) | 2:00 p.m. - 4:00 p.m. | Talleres de Danza Aérea | Fabiola Bolaños Brenes | Suspensión y Movimiento | De 3 años a +65. Fichas 30 min antes. |
+| **Talleres** | Sábado 11 | Parque Morazán (Toldo #3) | 2:00 p.m. - 3:00 p.m. | Juegos y relajación | Brahma Kumaris | Enfocá tu mente y vibrá paz | Niños. Fichas 30 min antes. |
+| **Talleres** | Sábado 11 | Parque Morazán (Toldo #1) | 2:30 p.m. - 4:00 p.m. | Acuarela: a pintar la naturaleza | Patrizia Gallo | Pintura | De 8 años en adelante. Fichas 30 min antes. |
+| **Talleres** | Sábado 11 | Parque Morazán (Toldo #2) | 2:30 p.m. - 3:30 p.m. | Taller de Modelatto | Arti Sur | Modelado | De 12 años a +65. Fichas 30 min antes. |
+| **Talleres** | Sábado 11 | Parque Morazán (Toldo #3) | 3:00 p.m. - 4:00 p.m. | Herramientas para el bienestar | Brahma Kumaris | Enfocá tu mente y vibrá paz | Todo público. Fichas 30 min antes. |
+| **Talleres** | Sábado 11 | Parque Morazán (Toldo #4) | 3:00 p.m. - 3:40 p.m. | Cartuchera de sueños | Fabiola Valerín Rojas | "Guarda tus Colores..." | De 3 a 12 años. Fichas 30 min antes. |
+| **Talleres** | Sábado 11 | Parque Morazán (Toldo #2) | 4:00 p.m. - 5:00 p.m. | Taller de Acuarela | Arti Sur | Pintura | De 12 años a +65. Fichas 30 min antes. |
+| **Talleres** | Sábado 11 | Parque Morazán (Toldo #4) | 4:15 p.m. - 5:30 p.m. | Mini escultura leyendas | Fabiola Valerín Rojas | Escultura | De 6 años a +65. Fichas 30 min antes. |
+| **Talleres** | Sábado 11 | Parque Morazán (Toldo #1) | 4:30 p.m. - 6:30 p.m. | Principiantes tejido Amigurumi | Nicole Vanessa Chaves Mora | Tejido | De 10 años a +65. Fichas 30 min antes. |
+| **Talleres** | Sábado 11 | Parque Morazán (Toldo #2) | 5:30 p.m. - 6:30 p.m. | Modelatto | Arti Sur | Modelado | De 12 años a +65. Fichas 30 min antes. |
+| **Talleres** | Sábado 11 | Parque Morazán (Toldo #4) | 6:30 p.m. - 8:30 p.m. | Pintando con Leonardo da Vinci | Compañía Los Malafachas | Pintura | De los 6 años hasta +65. Fichas 30 min antes. |
+| **Talleres** | Sábado 11 | Parque Morazán (Toldo #1) | 7:00 p.m. - 8:15 p.m. | Porcelana fría: temática Mafalda | Fabiola Valerín Rojas | Manualidades | De 7 años a +65. Fichas 30 min antes. |
+| **Talleres** | Domingo 12 | Parque Morazán (Toldo #1) | 11:00 a.m. - 12:30 m.d. | Escultura personajes creativos | Andrea Araya Guerra | Escultura | Mayores de 7 años. Fichas 30 min antes. |
+| **Talleres** | Domingo 12 | Parque Morazán (Toldo #2) | 11:00 a.m. - 12:00 m.d. | Taller de slime | Arti Sur | Manualidades | De 3 años en adelante. Fichas 30 min antes. |
+| **Talleres** | Domingo 12 | Parque Morazán (Toldo #3) | 11:00 a.m. - 7:00 p.m. | Toldo interactivo | Brahma Kumaris | Enfocá tu mente y vibrá paz | Todo público. Fichas 30 min antes. |
+| **Talleres** | Domingo 12 | Parque Morazán (Toldo #4) | 11:30 a.m. - 1:30 p.m. | Taller hula hulas para todos | Katherine Hodgson | Recreación | Todo público. Fichas 30 min antes. |
+| **Talleres** | Domingo 12 | Parque Morazán (Toldo #2) | 1:00 p.m. - 2:00 p.m. | Pintura en cerámica | Arti Sur | Pintura | De 12 años a +65. Fichas 30 min antes. |
+| **Talleres** | Domingo 12 | Parque Morazán (Toldo #3) | 1:00 p.m. - 2:00 p.m. | Juegos y relajación | Brahma Kumaris | Enfocá tu mente y vibrá paz | Niños. Fichas 30 min antes. |
+| **Talleres** | Domingo 12 | Parque Morazán (Toldo #1) | 1:30 p.m. - 2:15 p.m. | Taller de caricaturas en verano | Alejandro Hernández Rojas | Dibujo | De 6 a 16 años. Fichas 30 min antes. |
+| **Talleres** | Domingo 12 | Parque Morazán (Área Verde) | 2:00 p.m. - 4:00 p.m. | Talleres de danza aérea | Fabiola Bolaños Brenes | Suspensión y movimiento | De 3 años a +65. Fichas 30 min antes. |
+| **Talleres** | Domingo 12 | Parque Morazán (Toldo #3) | 2:00 p.m. - 3:00 p.m. | Herramientas para el bienestar | Brahma Kumaris | Enfocá tu mente y vibrá paz | Todo público. Fichas 30 min antes. |
+| **Talleres** | Domingo 12 | Parque Morazán (Toldo #4) | 2:15 p.m. - 3:45 p.m. | Máscara modelada en arcilla | ANESCO | Modelado | De 12 años a +65. Fichas 30 min antes. |
+| **Talleres** | Domingo 12 | Parque Morazán (Toldo #2) | 2:30 p.m. - 3:30 p.m. | Taller de porcelana fría | Arti Sur | Manualidades | De 12 años a +65. Fichas 30 min antes. |
+| **Talleres** | Domingo 12 | Parque Morazán (Toldo #1) | 3:00 p.m. - 3:45 p.m. | Leyendas costarricenses con arcilla| Alejandro Hernández Rojas | Modelado | De 6 años a 16 años. Fichas 30 min antes. |
+| **Talleres** | Domingo 12 | Parque Morazán (Toldo #2) | 4:00 p.m. - 5:00 p.m. | Taller de slime | Arti Sur | Manualidades | De 3 años en adelante. Fichas 30 min antes. |
+| **Talleres** | Domingo 12 | Parque Morazán (Toldo #1) | 4:30 p.m. - 5:30 p.m. | Intro a la danza del vientre | Cristina Vargas Sancho | Danza | De 15 años a +65. Fichas 30 min antes. |
+| **Talleres** | Domingo 12 | Parque Morazán (Toldo #4) | 4:30 p.m. - 5:30 p.m. | Pintura: bolso historia de SJ | Fabiola Valerín Rojas | "Lleva a San José contigo" | De 7 años a +65. Fichas 30 min antes. |
+| **Talleres** | Domingo 12 | Parque Morazán (Toldo #2) | 5:30 p.m. - 6:30 p.m. | Taller de Modelatto | Arti Sur | Modelado | De 12 años a +65. Fichas 30 min antes. |
+| **Talleres** | Domingo 12 | Parque Morazán (Toldo #4) | 6:00 p.m. - 7:00 p.m. | Pintura: camiseta de identidad | Fabiola Valerín Rojas | "Vístete de tu ciudad" | De 7 años a +65. Fichas 30 min antes. |
+| **Talleres** | Domingo 12 | Parque Morazán (Toldo #1) | 6:15 p.m. - 7:30 p.m. | Títeres de sombras | Wilberth Arroyo y Edder Alvarado | Susurros en el Eclipse | De 7 a 18 años (menores acompañados). |
+| **Talleres** | Domingo 12 | Parque Morazán (Toldo #4) | 7:20 p.m. - 8:20 p.m. | Porcelana fría: temática Principito | Fabiola Valerín Rojas | Manualidades | De 7 años a +65. Fichas 30 min antes. |
+| **Mercados** | Viernes 10 | Parque Nacional | 12:00 m.d. - 9:00 p.m. | Mercado de Productos | Emprendimientos | 99 Marcas participantes | Todo público |
+| **Mercados** | Viernes 10 | Parque España | 12:00 m.d. - 9:00 p.m. | Terraza Gastronómica | Emprendimientos | 3 Marcas participantes | Todo público |
+| **Mercados** | Viernes 10 | Parque Morazán | 12:00 m.d. - 9:00 p.m. | Mercado de Bienestar Animal | Emprendimientos | 9 Marcas participantes | Todo público |
+| **Mercados** | Viernes 10 | Parque Morazán | 12:00 m.d. - 9:00 p.m. | Terraza Gastronómica | Emprendimientos | 3 Marcas participantes | Todo público |
+| **Mercados** | Viernes 10 | Parque Morazán | 12:00 m.d. - 9:00 p.m. | Mercado de Trueque | Emprendimientos | 6 Marcas participantes | Todo público |
+| **Mercados** | Sábado 11 | Parque Nacional | 11:00 a.m. - 9:00 p.m. | Mercado de Productos | Emprendimientos | 99 Marcas participantes | Todo público |
+| **Mercados** | Sábado 11 | Parque España | 11:00 a.m. - 9:00 p.m. | Terraza Gastronómica | Emprendimientos | 3 Marcas participantes | Todo público |
+| **Mercados** | Sábado 11 | Parque Morazán | 11:00 a.m. - 9:00 p.m. | Mercado de Bienestar Animal | Emprendimientos | 9 Marcas participantes | Todo público |
+| **Mercados** | Sábado 11 | Parque Morazán | 11:00 a.m. - 9:00 p.m. | Terraza Gastronómica | Emprendimientos | 3 Marcas participantes | Todo público |
+| **Mercados** | Sábado 11 | Parque Morazán | 11:00 a.m. - 9:00 p.m. | Mercado de Trueque | Emprendimientos | 6 Marcas participantes | Todo público |
+| **Mercados** | Domingo 12 | Parque Nacional | 11:00 a.m. - 8:00 p.m. | Mercado de Productos | Emprendimientos | 99 Marcas participantes | Todo público |
+| **Mercados** | Domingo 12 | Parque España | 11:00 a.m. - 8:00 p.m. | Terraza Gastronómica | Emprendimientos | 3 Marcas participantes | Todo público |
+| **Mercados** | Domingo 12 | Parque Morazán | 11:00 a.m. - 8:00 p.m. | Mercado de Bienestar Animal | Emprendimientos | 9 Marcas participantes | Todo público |
+| **Mercados** | Domingo 12 | Parque Morazán | 11:00 a.m. - 8:00 p.m. | Terraza Gastronómica | Emprendimientos | 3 Marcas participantes | Todo público |
+| **Mercados** | Domingo 12 | Parque Morazán | 11:00 a.m. - 8:00 p.m. | Mercado de Trueque | Emprendimientos | 6 Marcas participantes | Todo público |
+| **Bibliotecas** | Viernes 10 | Parque España (Toldo Cómputo) | 11:00 a.m. | Milo | Bibliotecas Municipales | Tecnología | Todo público |
+| **Bibliotecas** | Viernes 10 | Parque España (Toldo Cómputo) | 1:30 p.m. | El semáforo (robótica) | Bibliotecas Municipales | Tecnología | Todo público |
+| **Bibliotecas** | Viernes 10 | Parque España (Toldo Cómputo) | 3:00 p.m. | Orquesta interactiva | Bibliotecas Municipales | Scratch Y Makey Makey | Todo público |
+| **Bibliotecas** | Viernes 10 | Parque España (Toldo Cómputo) | 4:30 p.m. | Robótica Spike creación de Kiki | Bibliotecas Municipales | Tecnología | Todo público |
+| **Bibliotecas** | Viernes 10 | Parque España (Toldo Cómputo) | 6:00 p.m. | Taller Robot explorador | Bibliotecas Municipales | Tecnología | Todo público |
+| **Bibliotecas** | Viernes 10 | Parque España (Toldo Cómputo) | 7:30 p.m. | El robot bailarín Break Dance | Bibliotecas Municipales | Tecnología | Todo público |
+| **Literatura** | Viernes 10 | Parque España (Corredor Lit) | 5:00 p.m. | Show de magia | Mago Danny | Entretenimiento | Todo público |
+| **Literatura** | Viernes 10 | Parque España (Corredor Lit) | 7:00 p.m. | Magia de la danza árabe | Sherihan Bellydance | Danza | Todo público |
+| **Bibliotecas** | Viernes 10 | Parque España | 10:00 a.m. | La Rana Tragona | Bibliotecas Municipales | Ludoteca | Todo público |
+| **Bibliotecas** | Viernes 10 | Parque España | 10:45 a.m. | Manitas pintoras | Bibliotecas Municipales | Ludoteca | Todo público |
+| **Bibliotecas** | Viernes 10 | Parque España | 11:00 a.m. | Títere con bolsa de papel | Bibliotecas Municipales | Ludoteca | Todo público |
+| **Bibliotecas** | Viernes 10 | Parque España | 11:00 a.m. | Flor decorativa | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Bibliotecas** | Viernes 10 | Parque España | 1:00 p.m. | Arte y decoración con lentejuelas | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Bibliotecas** | Viernes 10 | Parque España | 2:30 p.m. | Juego de memoria | Bibliotecas Municipales | Ludoteca | Todo público |
+| **Bibliotecas** | Viernes 10 | Parque España | 3:00 p.m. | Aprieta, moldea y crea | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Bibliotecas** | Viernes 10 | Parque España | 3:30 p.m. | Cuadro sensorial | Bibliotecas Municipales | Ludoteca | Todo público |
+| **Bibliotecas** | Viernes 10 | Parque España | 4:00 p.m. | Carrera de sacos | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Bibliotecas** | Viernes 10 | Parque España | 4:30 p.m. | Explorando la nieve | Bibliotecas Municipales | Ludoteca | Todo público |
+| **Bibliotecas** | Viernes 10 | Parque España | 5:00 p.m. | Pasar el aro | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Bibliotecas** | Viernes 10 | Parque España | 7:00 p.m. | Organizador de cactus | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Bibliotecas** | Viernes 10 | Parque España | 8:00 p.m. | Decora tu Unicornio o Caballo | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Literatura** | Sábado 11 | Parque España (Corredor Lit) | 1:00 p.m. | En busca de la isla desconocida | Teatro CUCARAMACARA | Teatro de Títeres | Todo público |
+| **Literatura** | Sábado 11 | Parque España (Corredor Lit) | 3:00 p.m. | Piojito | No Sé Qué Producciones | Teatro | Todo público |
+| **Literatura** | Sábado 11 | Parque España (Corredor Lit) | 6:00 p.m. | Cuentos y Cantos con Sole Alegría | Sole Alegría | Cuentacuentos | Todo público |
+| **Bibliotecas** | Sábado 11 | Parque España | 10:00 a.m. | La rana tragona | Bibliotecas Municipales | Ludoteca | Todo público |
+| **Bibliotecas** | Sábado 11 | Parque España | 10:45 a.m. | Manitas pintoras | Bibliotecas Municipales | Ludoteca | Todo público |
+| **Bibliotecas** | Sábado 11 | Parque España | 11:00 a.m. | Milo | Bibliotecas Municipales | Tecnología | Todo público |
+| **Bibliotecas** | Sábado 11 | Parque España | 11:00 a.m. | Títere con bolsa de papel | Bibliotecas Municipales | Ludoteca | Todo público |
+| **Bibliotecas** | Sábado 11 | Parque España | 11:00 a.m. | Pinta tu bolso | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Bibliotecas** | Sábado 11 | Parque España | 1:00 p.m. | Pajarito con paletas refrigerador | Bibliotecas Municipales | Ludoteca | Todo público |
+| **Bibliotecas** | Sábado 11 | Parque España | 1:00 p.m. | Organizador de cactus | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Bibliotecas** | Sábado 11 | Parque España | 1:30 p.m. | El semáforo (robótica) | Bibliotecas Municipales | Tecnología | Todo público |
+| **Bibliotecas** | Sábado 11 | Parque España | 2:00 p.m. | Pasar el aro | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Bibliotecas** | Sábado 11 | Parque España | 2:30 p.m. | Juego de memoria | Bibliotecas Municipales | Ludoteca | Todo público |
+| **Bibliotecas** | Sábado 11 | Parque España | 3:00 p.m. | Orquesta interactiva | Bibliotecas Municipales | Scratch Y Makey Makey | Todo público |
+| **Bibliotecas** | Sábado 11 | Parque España | 3:00 p.m. | ¡Abran campo, llegó el swing! | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Bibliotecas** | Sábado 11 | Parque España | 3:30 p.m. | Cuadro sensorial | Bibliotecas Municipales | Ludoteca | Todo público |
+| **Bibliotecas** | Sábado 11 | Parque España | 4:00 p.m. | Arte y decoración con lentejuelas | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Bibliotecas** | Sábado 11 | Parque España | 4:30 p.m. | Robótica Spike creación de Kiki | Bibliotecas Municipales | Tecnología | Todo público |
+| **Bibliotecas** | Sábado 11 | Parque España | 5:00 p.m. | Carrera de sacos | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Bibliotecas** | Sábado 11 | Parque España | 6:00 p.m. | Taller Robot explorador | Bibliotecas Municipales | Tecnología | Todo público |
+| **Bibliotecas** | Sábado 11 | Parque España | 7:00 p.m. | Aprieta, moldea y crea | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Bibliotecas** | Sábado 11 | Parque España | 7:30 p.m. | El robot bailarín Break Dance | Bibliotecas Municipales | Tecnología | Todo público |
+| **Bibliotecas** | Sábado 11 | Parque España | 8:00 p.m. | Flor decorativa | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Literatura** | Domingo 12 | Parque España (Corredor Lit) | 12:00 m.d. | Cuentos de Línea Vieja | Eyder Cuentacuentos | Narración Oral | Todo público |
+| **Literatura** | Domingo 12 | Parque España (Corredor Lit) | 2:00 p.m. | D`un Pueblo | XibalBaLog producción | Tarima | Todo público |
+| **Literatura** | Domingo 12 | Parque España (Corredor Lit) | 5:00 p.m. | Con el Alma Flamenca | El Tablao Flamenco | Danza española | Todo público |
+| **Bibliotecas** | Domingo 12 | Parque España | 10:00 a.m. | La rana tragona | Bibliotecas Municipales | Ludoteca | Todo público |
+| **Bibliotecas** | Domingo 12 | Parque España | 10:45 a.m. | Manitas pintoras | Bibliotecas Municipales | Ludoteca | Todo público |
+| **Bibliotecas** | Domingo 12 | Parque España | 11:00 a.m. | Milo | Bibliotecas Municipales | Tecnología | Todo público |
+| **Bibliotecas** | Domingo 12 | Parque España | 11:00 a.m. | Títere con bolsa de papel | Bibliotecas Municipales | Ludoteca | Todo público |
+| **Bibliotecas** | Domingo 12 | Parque España | 11:00 a.m. | Pinta tu bolso | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Bibliotecas** | Domingo 12 | Parque España | 1:00 p.m. | Pajarito con paletas refrigerador | Bibliotecas Municipales | Ludoteca | Todo público |
+| **Bibliotecas** | Domingo 12 | Parque España | 1:00 p.m. | Organizador de cactus | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Bibliotecas** | Domingo 12 | Parque España | 1:30 p.m. | El semáforo (robótica) | Bibliotecas Municipales | Tecnología | Todo público |
+| **Bibliotecas** | Domingo 12 | Parque España | 2:00 p.m. | Pasar el aro | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Bibliotecas** | Domingo 12 | Parque España | 2:30 p.m. | Juego de memoria | Bibliotecas Municipales | Ludoteca | Todo público |
+| **Bibliotecas** | Domingo 12 | Parque España | 3:00 p.m. | Orquesta interactiva | Bibliotecas Municipales | Scratch Y Makey Makey | Todo público |
+| **Bibliotecas** | Domingo 12 | Parque España | 3:00 p.m. | ¡Abran campo, llegó el swing! | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Bibliotecas** | Domingo 12 | Parque España | 3:30 p.m. | Cuadro sensorial | Bibliotecas Municipales | Ludoteca | Todo público |
+| **Bibliotecas** | Domingo 12 | Parque España | 4:00 p.m. | Arte y decoración con lentejuelas | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Bibliotecas** | Domingo 12 | Parque España | 4:30 p.m. | Robótica Spike creación de Kiki | Bibliotecas Municipales | Tecnología | Todo público |
+| **Bibliotecas** | Domingo 12 | Parque España | 5:00 p.m. | Carrera de sacos | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Bibliotecas** | Domingo 12 | Parque España | 6:00 p.m. | Taller Robot explorador | Bibliotecas Municipales | Tecnología | Todo público |
+| **Bibliotecas** | Domingo 12 | Parque España | 7:00 p.m. | Aprieta, moldea y crea | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Bibliotecas** | Domingo 12 | Parque España | 7:30 p.m. | El robot bailarín Break Dance | Bibliotecas Municipales | Tecnología | Todo público |
+| **Bibliotecas** | Domingo 12 | Parque España | 8:00 p.m. | Flor decorativa | Bibliotecas Municipales | Bibliotecas | Todo público |
+| **Artes Visuales** | Viernes 10 | Estación al Atlántico (Frente) | 12:00 m.d. - 9:00 p.m. | Lienzo creativo | Andrea Araya Guerra | Artes visuales / Obra participativa | Todo público |
+| **Artes Visuales** | Viernes 10 | Parque Nacional | 12:00 m.d. - 9:00 p.m. | Anudar: identidades conectadas | Basthian Magaña / Diego Mora | Instalación fotográfica | Todo público |
+| **Artes Visuales** | Viernes 10 | Parque Nacional | 12:00 m.d. - 9:00 p.m. | Viendo el presente de San José | Municipalidad de San José | "PhotoBooth" | Todo público |
+| **Patrimonio** | Viernes 10 | Asamblea Legislativa (Edif. Antiguo) | 2:00 p.m. / 4:00 p.m. | Visitas guiadas (Fortaleciendo la paz) | Asamblea Legislativa | Historia, memoria y ciudad | Cupo limitado. Requiere inscripción |
+| **Artes Visuales** | Viernes 10 | Alrededores Parque Morazán | 4:00/4:30/5:00/5:30 pm| Exposición Fauna (Realidad Aumentada)| Alianza Francesa | Artes visuales / QR | Calle 5, costado oeste Delta Hotels |
+| **Artes Visuales** | Viernes 10 | Plaza Libertad Electoral / TSE | 12:00 m.d. - 9:00 p.m. | San José te quiere aquí | Municipalidad de San José | Mural participativo | Todo público |
+| **Juegos** | Viernes 10 | Parque Jardín de Paz | 12:00 m.d. - 5:00 p.m. | Sacándole jugo al juego | Anselmo Navarro Prados | Instalación participativa | +6 años |
+| **Artes Visuales** | V/S/D | Teatro Nacional (S. Las Musas) | 9:00 a.m. - 5:00/6:00p.m| Expo: Reimaginar Teatro Nacional | Francisco Coto | Artes visuales / Fotografía | Lunes a viernes hasta 6pm. S/D hasta 5pm. |
+| **Artes Visuales** | Sábado 11 | Estación al Atlántico (Frente) | 11:00 a.m. - 5:00 p.m. | Lienzo creativo | Andrea Araya Guerra | Artes visuales / Obra participativa | Todo público |
+| **Artes Visuales** | Sábado 11 | Parque Nacional | 11:00 a.m. - 6:00 p.m. | Anudar: identidades conectadas | Basthian Magaña / Diego Mora | Instalación fotográfica | Todo público |
+| **Artes Visuales** | Sábado 11 | Parque Nacional | 11:00 a.m. - 9:00 p.m. | Viendo el presente de San José | Municipalidad de San José | "PhotoBooth" | Todo público |
+| **Diseño/Moda** | Sábado 11 | Parque Nacional | 12:00 m.d. - 4:00 p.m. | Laboratorio Urbano SJ / Tours | Municipalidad de San José | Intervención urbana | Desde costado sureste del parque |
+| **Diseño/Moda** | Sábado 11 | Parque Nacional | 4:00 p.m. | San José Bazar Fashion Show | San José Bazar | Diseño - Moda | Desfile de moda circular |
+| **Patrimonio** | Sábado 11 | Asamblea Legislativa (Edif. Antiguo) | 10:00am/12:00md/2:00pm/4:00pm| Visitas guiadas (Fortaleciendo la paz) | Asamblea Legislativa | Historia, memoria y ciudad | Cupo limitado. Requiere inscripción |
+| **Artes Visuales** | Sábado 11 | Plaza Libertad Electoral / TSE | 12:00 m.d. - 9:00 p.m. | San José te quiere aquí | Municipalidad de San José | Mural participativo | Todo público |
+| **Artes Visuales** | Sábado 11 | Tienda Ñ | 3:00 p.m. - 4:00 p.m. | Taller: escultura feroz | Ferdinand Sosa | Personalización esculturas | Cupo limitado |
+| **Recreación** | Sábado 11 | Parque Jardín de Paz | 11:00 a.m. - 6:00 p.m. | Picnic para jugar | José Pablo Enríquez / Alex Esteban | Juegos / Historia y patrimonio | Todo público |
+| **Música** | Sábado 11 | Parque Jardín de Paz | 3:00 p.m. - 5:00 p.m. | Círculo de tambores | José Andrés Alfaro Pereira | Obra musical participativa | Todo público |
+| **Artes Visuales** | Domingo 12 | Estación al Atlántico (Frente) | 12:00 m.d. - 5:00 p.m. | Lienzo creativo | Andrea Araya Guerra | Artes visuales / Obra participativa | Todo público |
+| **Artes Visuales** | Domingo 12 | Parque Nacional | 11:00 a.m. - 6:00 p.m. | Anudar: identidades conectadas | Basthian Magaña / Diego Mora | Instalación fotográfica | Todo público |
+| **Artes Visuales** | Domingo 12 | Parque Nacional | 11:00 a.m. - 8:00 p.m. | Viendo el presente de San José | Municipalidad de San José | "PhotoBooth" | Todo público |
+| **Patrimonio** | Domingo 12 | Asamblea Legislativa (Edif. Antiguo) | 10:00am/12:00md/2:00pm | Visitas guiadas (Fortaleciendo la paz) | Asamblea Legislativa | Historia, memoria y ciudad | Cupo limitado. Requiere inscripción |
+| **Artes Visuales** | Domingo 12 | Plaza Libertad Electoral / TSE | 12:00 m.d. - 9:00 p.m. | San José te quiere aquí | Municipalidad de San José | Mural participativo | Todo público |
+| **Recreación** | Domingo 12 | Parque Jardín de Paz | 11:00 a.m. - 6:00 p.m. | Picnic para jugar | José Pablo Enríquez / Alex Esteban | Juegos / Historia y patrimonio | Todo público |
+| **Recreación** | Domingo 12 | Parque Jardín de Paz | 11:00 a.m. - 6:00 p.m. | Sacándole jugo al juego | Anselmo Navarro Prados | Instalación participativa | +6 años |
+| **Deportes** | Sábado 11 | Plaza de la Democracia | 11:00 a.m. - 6:00 p.m. | Zona Deportiva y Recreativa | Comité Cantonal de Deportes | Deportes | Todo público |
+| **Deportes** | Sábado 11 | Plaza de la Democracia | 2:00 p.m. - 8:00 p.m. | Veladas de Boxeo | JB Producciones / Asoc. Boxeo | Boxeo | Todo público |
+| **Cine** | Sábado 11 | Plaza de la Democracia | 2:00 p.m. - 2:45 p.m. | Cine Sur / Infantil | Carretica Cuentera | 16 Cuentos infantiles narrados | Serie Cuenticos en familia |
+| **Cine** | Sábado 11 | Plaza de la Democracia | 3:00 p.m. - 3:40 p.m. | Bonart el alquimista y su amiga | Jorge Alberto Solís | Mimo / Clown | Todo público |
+| **Cine** | Sábado 11 | Plaza de la Democracia | 4:00 p.m. - 5:30 p.m. | El baile de la gacela (2018) | Dirección: Iván Porras | Cine / Película | Mayores / Menores acompañados |
+| **Cine** | Sábado 11 | Plaza de la Democracia | 5:50 p.m. - 7:05 p.m. | El sonido de las cosas (2016) | Dirección: Ariel Escalante | Cine / Película | Todo público |
+| **Cine** | Sábado 11 | Plaza de la Democracia | 7:20 p.m. - 9:00 p.m. | San José de noche (2016) | Dir: Federico Lang (Caramba Films) | Serie documental | Cap: Mariachi / Hay rock / La bohemia |
+| **Deportes** | Domingo 12 | Plaza de la Democracia | 11:00 a.m. - 6:00 p.m. | Zona Deportiva y Recreativa | Comité Cantonal de Deportes | Deportes | Todo público |
+| **Deportes** | Domingo 12 | Plaza de la Democracia | 2:00 p.m. - 7:00 p.m. | Veladas de Boxeo | JB Producciones / Asoc. Boxeo | Boxeo | Todo público |
+| **Cine** | Domingo 12 | Plaza de la Democracia | 2:00 p.m. - 2:45 p.m. | Cine Sur / Infantil | Carretica Cuentera | 16 Cuentos infantiles narrados | Serie Cuenticos en familia |
+| **Cine** | Domingo 12 | Plaza de la Democracia | 3:00 p.m. - 4:30 p.m. | El baile de la gacela (2018) | Dirección: Iván Porras | Cine / Película | Mayores / Menores acompañados |
+| **Cine** | Domingo 12 | Plaza de la Democracia | 4:50 p.m. - 6:05 p.m. | El sonido de las cosas (2016) | Dirección: Ariel Escalante | Cine / Película | Todo público |
+| **Cine** | Domingo 12 | Plaza de la Democracia | 6:20 p.m. - 8:00 p.m. | San José de noche (2016) | Dir: Federico Lang (Caramba Films) | Serie documental | Cap: La California / Lucha / Mayoreo |
+| **Deportes** | Sábado 11 | Min. Relaciones Exteriores (Av 7-9) | 11:00 a.m. - 6:00 p.m. | Zona Deportiva y Recreativa | Comité Cantonal de Deportes | Deportes | Todo público |
+| **Deportes** | Sábado 11 | Min. Relaciones Exteriores (Av 7-9) | 2:00 p.m. - 8:00 p.m. | Veladas de Boxeo | JB Producciones / Asoc. Boxeo | Boxeo | Todo público |
+| **Cine** | Sábado 11 | Min. Relaciones Exteriores (Av 7-9) | 2:00 p.m. - 2:40 p.m. | Bonart el alquimista y su amiga | Jorge Alberto Solís | Mimo / Clown | Todo público |
+| **Cine** | Sábado 11 | Min. Relaciones Exteriores (Av 7-9) | 3:00 p.m. - 3:45 p.m. | Cine Sur / Infantil | Carretica Cuentera | 16 Cuentos infantiles narrados | Serie Cuenticos en familia |
+| **Cine** | Sábado 11 | Min. Relaciones Exteriores (Av 7-9) | 4:00 p.m. - 5:30 p.m. | El baile de la gacela (2018) | Dirección: Iván Porras | Cine / Película | Mayores / Menores acompañados |
+| **Cine** | Sábado 11 | Min. Relaciones Exteriores (Av 7-9) | 5:50 p.m. - 7:05 p.m. | El sonido de las cosas (2016) | Dirección: Ariel Escalante | Cine / Película | Todo público |
+| **Cine** | Sábado 11 | Min. Relaciones Exteriores (Av 7-9) | 7:20 p.m. - 9:00 p.m. | San José de noche (2016) | Dir: Federico Lang (Caramba Films) | Serie documental | Cap: Karaoke/Sodas/Barrio Chino... |
+| **Deportes** | Domingo 12 | Min. Relaciones Exteriores (Av 7-9) | 11:00 a.m. - 6:00 p.m. | Zona Deportiva y Recreativa | Comité Cantonal de Deportes | Deportes | Todo público |
+| **Deportes** | Domingo 12 | Min. Relaciones Exteriores (Av 7-9) | 2:00 p.m. - 7:00 p.m. | Veladas de Boxeo | JB Producciones / Asoc. Boxeo | Boxeo | Todo público |
+| **Cine** | Domingo 12 | Min. Relaciones Exteriores (Av 7-9) | 2:00 p.m. - 2:45 p.m. | Cine Sur / Infantil | Carretica Cuentera | 16 Cuentos infantiles narrados | Serie Cuenticos en familia |
+| **Cine** | Domingo 12 | Min. Relaciones Exteriores (Av 7-9) | 3:00 p.m. - 4:30 p.m. | El baile de la gacela (2018) | Dirección: Iván Porras | Cine / Película | Mayores / Menores acompañados |
+| **Cine** | Domingo 12 | Min. Relaciones Exteriores (Av 7-9) | 4:50 p.m. - 6:05 p.m. | El sonido de las cosas (2016) | Dirección: Ariel Escalante | Cine / Película | Todo público |
+| **Cine** | Domingo 12 | Min. Relaciones Exteriores (Av 7-9) | 6:20 p.m. - 8:00 p.m. | San José de noche (2016) | Dir: Federico Lang (Caramba Films) | Serie documental | Cap: Salones / Recolectores / La Muerte |
+| **Artes Escénicas** | Viernes 10 | Gradas Tribunal Supremo (TSE) | 6:00 p.m. | Festival Puro Cuento | Edgar Serrano (Co) Monólogo | Narración Oral | Todo público |
+| **Artes Escénicas** | Viernes 10 | Gradas Tribunal Supremo (TSE) | 7:00 p.m. | Festival Puro Cuento | José M. Martinez Monólogo | Narración Oral | Todo público |
+| **Artes Escénicas** | Viernes 10 | Gradas Tribunal Supremo (TSE) | 8:00 p.m. | Festival Puro Cuento | Disparejos Cuenteria | Narración Oral | Todo público |
+| **Artes Escénicas** | Viernes 10 | Parque España (Corredor Lit) | 5:00 p.m. | Show de magia | Mago Danny | Performance | Todo público |
+| **Artes Escénicas** | Viernes 10 | Parque España (Corredor Lit) | 7:00 p.m. | La Magia de la Danza Árabe | Sheriham Bellydance | Danza | Todo público |
+| **Artes Escénicas** | Sábado 11 | Bulevar Avenida Central | 9:00 a.m. | Conmemoración Batalla de Rivas | Instituciones educativas | Pasacalles | Todo público |
+| **Artes Escénicas** | Sábado 11 | Gradas Tribunal Supremo (TSE) | 11:00 a.m. | Festival Puro Cuento | Shalala Espectáculo | Títeres | Todo público |
+| **Artes Escénicas** | Sábado 11 | Gradas Tribunal Supremo (TSE) | 12:00 m.d. | Festival Puro Cuento | Edgar Serrano (Co) Monólogo | Narración Oral | Todo público |
+| **Artes Escénicas** | Sábado 11 | Gradas Tribunal Supremo (TSE) | 1:00 p.m. | Festival Puro Cuento | Cuentamundos Cuentería | Narración Oral | Todo público |
+| **Artes Escénicas** | Sábado 11 | Gradas Tribunal Supremo (TSE) | 2:00 p.m. | Festival Puro Cuento | Flow Studio Danza | Danza | Todo público |
+| **Artes Escénicas** | Sábado 11 | Gradas Tribunal Supremo (TSE) | 3:00 p.m. | Festival Puro Cuento | Andrey Cuentería | Narración Oral | Todo público |
+| **Artes Escénicas** | Sábado 11 | Gradas Tribunal Supremo (TSE) | 4:00 p.m. | Festival Puro Cuento | Beto Garrapata Magia | Show de magia | Todo público |
+| **Artes Escénicas** | Sábado 11 | Gradas Tribunal Supremo (TSE) | 5:00 p.m. | Festival Puro Cuento | Alex Marzzo Monólogo | Narración Oral | Todo público |
+| **Artes Escénicas** | Sábado 11 | Gradas Tribunal Supremo (TSE) | 6:00 p.m. | Festival Puro Cuento | Colectivo Cuentiando Cuentería | Narración Oral | Todo público |
+| **Artes Escénicas** | Sábado 11 | Gradas Tribunal Supremo (TSE) | 7:00 p.m. | Festival Puro Cuento | Aráknido Circo | Show de circo | Todo público |
+| **Artes Escénicas** | Sábado 11 | Gradas Tribunal Supremo (TSE) | 8:00 p.m. | Festival Puro Cuento | Gustavo Peláez Monólogo | Stand up Comedy | Todo público |
+| **Artes Escénicas** | Sábado 11 | Parque Morazán (Tarima) | 10:45 a.m. | Las Lavanderas / Historia del Fusil | Grupo de Teatro Boca Calle MSJ | Teatro | Todo público |
+| **Artes Escénicas** | Sábado 11 | Parque España (Corredor Lit) | 1:00 p.m. | Piojito | No sé qué Producciones | Teatro | Todo público |
+| **Artes Escénicas** | Sábado 11 | Parque España (Corredor Lit) | 3:00 p.m. | Cuentos a la Obra | Los Complices | Teatro | Todo público |
+| **Artes Escénicas** | Sábado 11 | Parque España (Corredor Lit) | 5:00 p.m. | Cuentos y Cantos | Sole Alegría | Títeres | Todo público |
+| **Artes Escénicas** | Sábado 11 | Tarima Urbana Calle 21 | 11:00 a.m. | Classics Clows | Casa Circo El Respiro | Circo | Todo público |
+| **Artes Escénicas** | Sábado 11 | Tarima Urbana Calle 21 | 12:30 p.m. | Namaitmi, Los sueños del agua | Lunayena títeres | Títeres | Todo público |
+| **Artes Escénicas** | Sábado 11 | Tarima Urbana Calle 21 | 1:30 p.m. | Cía. Folclorica Guaycará | Ecos de una ciudad de flores | Danza | Todo público |
+| **Artes Escénicas** | Sábado 11 | Paseo de los Damas | 2:00 p.m. | Santuario | Circo La Libertad | Pasacalles | Todo público |
+| **Artes Escénicas** | Sábado 11 | Parque España (Tarima Electrónica) | 2:00 p.m. | Yo Soy | Greta Castro | Performance | Todo público |
+| **Artes Escénicas** | Sábado 11 | Parque España (Tarima Electrónica) | 3:00 p.m. | Había una vez | Raiz teatro | Teatro | Todo público |
+| **Artes Escénicas** | Sábado 11 | Tarima Móvil - Asamblea | 11:00 a.m. | ¡Guipipia, Tradición y Cultura! | Asoc. Cultura Popular Guipipia | Danza Folclórica | Todo público |
+| **Artes Escénicas** | Sábado 11 | Tarima Móvil - Asamblea | 12:10 p.m. | Inspirando a Costa Rica | Inspiraciones Costarricenses | Danza Folclórica | Todo público |
+| **Artes Escénicas** | Sábado 11 | Tarima Móvil - Asamblea | 12:30 p.m. | Temporada de Huracanes | Gen Flores | Danza | Todo público |
+| **Artes Escénicas** | Sábado 11 | Tarima Móvil - Asamblea | 1:10 p.m. | Acertijo ilógico | Baltazar Vincenti | Danza | Todo público |
+| **Artes Escénicas** | Sábado 11 | Tarima Móvil - Asamblea | 1:45 p.m. | Sara y el Gigante | Colectivo Escenico Ataña | Teatro | Todo público |
+| **Artes Escénicas** | Sábado 11 | Tarima Móvil - Asamblea | 2:30 p.m. | Chiquitibúm | Chiquiticos | Musical | Todo público |
+| **Artes Escénicas** | Sábado 11 | Tarima Móvil - Asamblea | 3:30 p.m. | FESTIFOLK C. R. | 21 Grupos Folclóricos | Folclor Adultos | (Ver programa para lista de grupos) |
+| **Artes Escénicas** | Sábado 11 | Tarima Móvil - Asamblea | 4:50 p.m. | El llanto de un tambor | Iré Movimiento | Danza | Todo público |
+| **Artes Escénicas** | Sábado 11 | Tarima Móvil - Asamblea | 5:45 p.m. | Sumergencia | Michelle Sánchez | Danza | Todo público |
+| **Artes Escénicas** | Sábado 11 | Tarima Móvil - Asamblea | 7:00 p.m. | El último bolero | Grupo de Teatro Boca Calle MSJ | Teatro | Todo público |
+| **Artes Escénicas** | Sábado 11 | Tarima Móvil - Asamblea | 7:50 p.m. | Swingnopsis | La Cuna del Swing | Swing criollo | Todo público |
+| **Artes Escénicas** | Domingo 12 | Parque España (Tarima Electrónica) | 1:00 p.m. | ENTRE PÁGINAS: El secreto... | Plástica Escénica Solaris | Teatro | Todo público |
+| **Artes Escénicas** | Domingo 12 | Parque España (Tarima Electrónica) | 2:00 p.m. | Impromptus | Cine en IV Impromptus | Improvisación teatral | Todo público |
+| **Artes Escénicas** | Domingo 12 | Tarima Urbana Calle 21 | 11:00 a.m. | Pura Identidad | EvolucionArte | Danza | Todo público |
+| **Artes Escénicas** | Domingo 12 | Tarima Urbana Calle 21 | 11:30 a.m. | Mi tierra | Grupo folclórico Costumbres... | Danza folclórica | Todo público |
+| **Artes Escénicas** | Domingo 12 | Tarima Urbana Calle 21 | 12:00 p.m. | Como si fuera el aire | Colectivo Javorai | Teatro y circo | Todo público |
+| **Artes Escénicas** | Domingo 12 | Tarima Urbana Calle 21 | 1:00 p.m. | L´Amour | Katherine Marchena | Teatro físico | Todo público |
+| **Artes Escénicas** | Domingo 12 | Tarima Móvil - Asamblea | 11:00 a.m. | Amor de temporda | Enrique Alvarado | Teatro Musical | Todo público |
+| **Artes Escénicas** | Domingo 12 | Tarima Móvil - Asamblea | 12:10 p.m. | Espectáculo folclórico | Cía. Folclórica Municipal SJ | Danza folclórica | Todo público |
+| **Artes Escénicas** | Domingo 12 | Tarima Móvil - Asamblea | 12:30 p.m. | El Fiestón 40° Aniversario | Los Pirulos | Comedia Clown | Todo público |
+| **Artes Escénicas** | Domingo 12 | Tarima Móvil - Asamblea | 2:00 p.m. | Duelo y Dos | Allyson Maykall | Danza | Todo público |
+| **Artes Escénicas** | Domingo 12 | Tarima Móvil - Asamblea | 3:00 p.m. | Manual de Desuso a 4 voces | Luis Diego Gamboa | Danza | Todo público |
+| **Artes Escénicas** | Domingo 12 | Tarima Móvil - Asamblea | 3:30 p.m. | Dialógos de dos cuerpos... | Cami Ramírez y Raúl Martínez | Danza | Todo público |
+| **Artes Escénicas** | Domingo 12 | Tarima Móvil - Asamblea | 4:00 p.m. | La Razón Eclipsada | Cata Zeledón y Bryan Chavarría | Danza | Todo público |
+| **Artes Escénicas** | Domingo 12 | Tarima Móvil - Asamblea | 5:00 p.m. | Trazos | Michelle Moreira | Danza | Todo público |
+| **Artes Escénicas** | Domingo 12 | Tarima Móvil - Asamblea | 5:45 p.m. | La bailarina y el callejero | Grupo de Teatro Boca Calle MSJ | Teatro | Todo público |
+| **Artes Escénicas** | Domingo 12 | Tarima Móvil - Asamblea | 6:30 p.m. | Enjambre | Jayne Juslin Pennington | Danza | Todo público |
+| **Artes Escénicas** | Domingo 12 | Tarima Móvil - Asamblea | 7:15 p.m. | GRIOTS: cuerpos, musica y poesía | Shirley Campbell | Danza | Todo público |
+| **Artes Escénicas** | Domingo 12 | Paseo de los Damas | 2:00 p.m. | FESTIFOLK C. R. | 13 Agrupaciones Costa Rica | Pasacalle | Pasacalle Nacional |
+| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 11:00 a.m. | Festival Puro Cuento | Cucaramacara Producciones | Narración Oral | Todo público |
+| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 12:00 m.d. | Festival Puro Cuento | Edgar Serrano (Co) Monólogo | Narración Oral | Todo público |
+| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 1:00 p.m. | Festival Puro Cuento | Katherine Marchena CuenterÍa | Narración Oral | Todo público |
+| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 1:30 p.m. | Festival Puro Cuento | Grupo Tres Deseos CuenterÍa | Narración Oral | Todo público |
+| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 2:00 p.m. | Festival Puro Cuento | Bonart CuenterÍa | Narración Oral | Todo público |
+| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 3:00 p.m. | Festival Puro Cuento | Cuentofagos CuenterÍa | Narración Oral | Todo público |
+| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 3:30 p.m. | Festival Puro Cuento | Gilda Benavidez Monólogo | Narración Oral | Todo público |
+| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 4:00 p.m. | Festival Puro Cuento | Jenny Aranda CuenterÍa | Narración Oral | Todo público |
+| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 4:30 p.m. | Festival Puro Cuento | Ana Maria Amador Circo | Show de circo | Todo público |
+| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 5:00 p.m. | Festival Puro Cuento | Calypsonia Monólogo | Stand up Comedy | Todo público |
+| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 6:00 p.m. | Festival Puro Cuento | Colectivo Cuentiando CuenterÍa | Narración Oral | Todo público |
+| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 7:00 p.m. | Festival Puro Cuento | Thelma Darkings Monólogo | Narración Oral | Todo público |
+| **Bienestar Animal** | Viernes 10 | Parque Morazán | 11:00 a.m. | Mini parque de perros | MSJ- Dok appetit | Recreación animal | Todo público |
+| **Bienestar Animal** | Viernes 10 | Parque Morazán | 11:00 a.m. | Mercado de productos Mascotas | Municipalidad de San José | Mercado | Todo público |
+| **Bienestar Animal** | Sábado 11 | Parque Morazán | 11:00 a.m. | Mini parque de perros | MSJ- Dok appetit | Recreación animal | Todo público |
+| **Bienestar Animal** | Sábado 11 | Parque Morazán | 11:00 a.m. | Mercado de productos Mascotas | Municipalidad de San José | Mercado | Todo público |
+| **Bienestar Animal** | Sábado 11 | Parque Morazán | 11:30 a.m. | Pasarela Poodles | Municipalidad de San José | Exhibición | Todo público |
+| **Bienestar Animal** | Sábado 11 | Parque Morazán | 1:00 p.m. | Mejor truco de tu mascota | Municipalidad de San José | Exhibición | Todo público |
+| **Bienestar Animal** | Sábado 11 | Parque Morazán | 1:30 p.m. | Mi mascota y yo nos parecemos | Municipalidad de San José | Concurso | Todo público |
+| **Bienestar Animal** | Sábado 11 | Parque Morazán | 2:00 p.m. | Pasarela Pastores | Municipalidad de San José | Exhibición | Todo público |
+| **Bienestar Animal** | Sábado 11 | Parque Morazán | 3:00 p.m. | Exhibición unidad canina K9 | Municipalidad de San José | Exhibición | Todo público |
+| **Bienestar Animal** | Sábado 11 | Parque Morazán | 3:30 p.m. | Charla de Popostaje | Ollín, Compostaje Creativo | Charla | Todo público |
+| **Bienestar Animal** | Sábado 11 | Parque Morazán | 4:30 p.m. | Charla Adiestramiento Canino | Adiestramiento Canina JAGGER | Charla | Todo público |
+| **Bienestar Animal** | Sábado 11 | Parque Morazán | 5:00 p.m. | Pasarela de perros Chatos | Municipalidad de San José | Exhibición | Todo público |
+| **Bienestar Animal** | Domingo 12 | Parque Morazán | 11:00 a.m. | Mini parque de perros | MSJ- Dok appetit | Recreación animal | Todo público |
+| **Bienestar Animal** | Domingo 12 | Parque Morazán | 11:00 a.m. | Mercado de productos Mascotas | Municipalidad de San José | Mercado | Todo público |
+| **Bienestar Animal** | Domingo 12 | Parque Morazán | 1:00 p.m. | Unidad Canina Bomberos CR | Benemérito Cuerpo Bomberos | Exhibición | Todo público |
+| **Bienestar Animal** | Domingo 12 | Parque Morazán | 1:30 p.m. | Pasarela raza Dachshund | Municipalidad de San José | Exhibición | Todo público |
+| **Bienestar Animal** | Domingo 12 | Parque Morazán | 2:00 p.m. | Pasarela Retriever | Municipalidad de San José | Exhibición | Todo público |
+| **Bienestar Animal** | Domingo 12 | Parque Morazán | 3:00 p.m. | Exhibición unidad canina K9 | Municipalidad de San José | Exhibición | Todo público |
+| **Bienestar Animal** | Domingo 12 | Parque Morazán | 3:30 p.m. | Mi mejor disfraz | Ollín, Compostaje Creativo | Concurso | Todo público |
+| **Bienestar Animal** | Domingo 12 | Parque Morazán | 4:30 p.m. | Pasarela perros raza pequeña | Municipalidad de San José | Hasta 15 Kg | Todo público |
+| **Bienestar Animal** | Domingo 12 | Parque Morazán | 5:00 p.m. | Pasarela perros raza grande | Municipalidad de San José | Desde 20 Kg | Todo público |
