@@ -50,27 +50,6 @@
   align-items: center;
 }
 
-.kiwuTopLink {
-  width: 40px;
-  height: 40px;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  background: rgba(255, 255, 255, 0.14);
-  display: grid;
-  place-items: center;
-  text-decoration: none;
-}
-
-.kiwuTopLink:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.kiwuTopLogo {
-  width: 18px;
-  height: 18px;
-  display: block;
-}
-
 .segmented {
   display: flex;
   padding: 4px;
@@ -291,9 +270,9 @@
 }
 
 .iconActionFavActive {
-  color: #600177;
+  color: #fbae14;
   border-color: rgba(96, 1, 119, 0.35);
-  background: rgba(96, 1, 119, 0.06);
+  background: #600177;
 }
 
 .ctaFav {
@@ -318,8 +297,15 @@
   padding: 14px 16px 18px;
   color: rgba(255, 255, 255, 0.86);
   background: #600177;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.footerLeft {
   display: grid;
-  gap: 8px;
+  gap: 6px;
 }
 
 .footerInfoLink {
@@ -336,6 +322,28 @@
 
 .footerInfoLink:hover {
   opacity: 0.9;
+}
+
+.footerKiwu {
+  width: 42px;
+  height: 42px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.14);
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  flex: 0 0 auto;
+}
+
+.footerKiwu:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.footerKiwuLogo {
+  width: 18px;
+  height: 18px;
+  display: block;
 }
 
 .infoPage {

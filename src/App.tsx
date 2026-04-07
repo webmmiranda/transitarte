@@ -213,9 +213,6 @@ function App() {
                 Instalar
               </button>
             ) : null}
-            <a className="kiwuTopLink" href="https://kiwu.pro/" target="_blank" rel="noreferrer" aria-label="Kiwu.pro">
-              <img className="kiwuTopLogo" src="https://kiwu.pro/images/kiwulogo.svg" alt="" aria-hidden="true" />
-            </a>
           </div>
         </div>
 
@@ -471,10 +468,15 @@ function App() {
 
           {!showInfo ? (
             <div className="footerNote">
-              <div>Zona horaria: Costa Rica (UTC-6)</div>
-              <button className="footerInfoLink" type="button" onClick={() => setShowInfo(true)}>
-                Aviso / Información
-              </button>
+              <div className="footerLeft">
+                <div>Zona horaria: Costa Rica (UTC-6)</div>
+                <button className="footerInfoLink" type="button" onClick={() => setShowInfo(true)}>
+                  Aviso / Información
+                </button>
+              </div>
+              <a className="footerKiwu" href="https://kiwu.pro/" target="_blank" rel="noreferrer" aria-label="Kiwu.pro">
+                <img className="footerKiwuLogo" src="https://kiwu.pro/images/kiwulogo.svg" alt="" aria-hidden="true" />
+              </a>
             </div>
           ) : null}
         </main>
