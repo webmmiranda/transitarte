@@ -254,7 +254,7 @@ He definido las siguientes columnas para que la información tenga sentido en un
 | **Cine** | Domingo 12 | Min. Relaciones Exteriores (Av 7-9) | 6:20 p.m. - 8:00 p.m. | San José de noche (2016) | Dir: Federico Lang (Caramba Films) | Serie documental | Cap: Salones / Recolectores / La Muerte |
 | **Artes Escénicas** | Viernes 10 | Gradas Tribunal Supremo (TSE) | 6:00 p.m. | Festival Puro Cuento | Edgar Serrano (Co) Monólogo | Narración Oral | Todo público |
 | **Artes Escénicas** | Viernes 10 | Gradas Tribunal Supremo (TSE) | 7:00 p.m. | Festival Puro Cuento | José M. Martinez Monólogo | Narración Oral | Todo público |
-| **Artes Escénicas** | Viernes 10 | Gradas Tribunal Supremo (TSE) | 8:00 p.m. | Festival Puro Cuento | Disparejos Cuenteria | Narración Oral | Todo público |
+| **Artes Escénicas** | Viernes 10 | Gradas Tribunal Supremo (TSE) | 8:00 p.m. | Festival Puro Cuento | Disparejos  Cuentería | Narración Oral | Todo público |
 | **Artes Escénicas** | Viernes 10 | Parque España (Corredor Lit) | 5:00 p.m. | Show de magia | Mago Danny | Performance | Todo público |
 | **Artes Escénicas** | Viernes 10 | Parque España (Corredor Lit) | 7:00 p.m. | La Magia de la Danza Árabe | Sheriham Bellydance | Danza | Todo público |
 | **Artes Escénicas** | Sábado 11 | Bulevar Avenida Central | 9:00 a.m. | Conmemoración Batalla de Rivas | Instituciones educativas | Pasacalles | Todo público |
@@ -309,15 +309,15 @@ He definido las siguientes columnas para que la información tenga sentido en un
 | **Artes Escénicas** | Domingo 12 | Paseo de los Damas | 2:00 p.m. | FESTIFOLK C. R. | 13 Agrupaciones Costa Rica | Pasacalle | Pasacalle Nacional |
 | **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 11:00 a.m. | Festival Puro Cuento | Cucaramacara Producciones | Narración Oral | Todo público |
 | **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 12:00 m.d. | Festival Puro Cuento | Edgar Serrano (Co) Monólogo | Narración Oral | Todo público |
-| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 1:00 p.m. | Festival Puro Cuento | Katherine Marchena CuenterÍa | Narración Oral | Todo público |
-| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 1:30 p.m. | Festival Puro Cuento | Grupo Tres Deseos CuenterÍa | Narración Oral | Todo público |
-| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 2:00 p.m. | Festival Puro Cuento | Bonart CuenterÍa | Narración Oral | Todo público |
-| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 3:00 p.m. | Festival Puro Cuento | Cuentofagos CuenterÍa | Narración Oral | Todo público |
+| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 1:00 p.m. | Festival Puro Cuento | Katherine Marchena Cuentería | Narración Oral | Todo público |
+| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 1:30 p.m. | Festival Puro Cuento | Grupo Tres Deseos Cuentería | Narración Oral | Todo público |
+| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 2:00 p.m. | Festival Puro Cuento | Bonart Cuentería | Narración Oral | Todo público |
+| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 3:00 p.m. | Festival Puro Cuento | Cuentofagos Cuentería | Narración Oral | Todo público |
 | **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 3:30 p.m. | Festival Puro Cuento | Gilda Benavidez Monólogo | Narración Oral | Todo público |
-| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 4:00 p.m. | Festival Puro Cuento | Jenny Aranda CuenterÍa | Narración Oral | Todo público |
+| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 4:00 p.m. | Festival Puro Cuento | Jenny Aranda Cuentería | Narración Oral | Todo público |
 | **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 4:30 p.m. | Festival Puro Cuento | Ana Maria Amador Circo | Show de circo | Todo público |
 | **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 5:00 p.m. | Festival Puro Cuento | Calypsonia Monólogo | Stand up Comedy | Todo público |
-| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 6:00 p.m. | Festival Puro Cuento | Colectivo Cuentiando CuenterÍa | Narración Oral | Todo público |
+| **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 6:00 p.m. | Festival Puro Cuento | Colectivo Cuentiando Cuentería | Narración Oral | Todo público |
 | **Artes Escénicas** | Domingo 12 | Gradas Tribunal Supremo (TSE) | 7:00 p.m. | Festival Puro Cuento | Thelma Darkings Monólogo | Narración Oral | Todo público |
 | **Bienestar Animal** | Viernes 10 | Parque Morazán | 11:00 a.m. | Mini parque de perros | MSJ- Dok appetit | Recreación animal | Todo público |
 | **Bienestar Animal** | Viernes 10 | Parque Morazán | 11:00 a.m. | Mercado de productos Mascotas | Municipalidad de San José | Mercado | Todo público |

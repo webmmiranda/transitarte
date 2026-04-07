@@ -402,8 +402,20 @@ function App() {
                           </div>
                         </div>
 
-                        <div className="itemTitle">{e.title}</div>
-                        {e.artist ? <div className="itemSub">{e.artist}</div> : null}
+                        {(() => {
+                          const isConcertSwap =
+                            (e.title.toLowerCase().includes('concierto') ||
+                              e.title.toLowerCase().includes('festival puro cuento')) &&
+                            !!e.artist
+                          const displayTitle = isConcertSwap ? e.artist : e.title
+                          const displaySub = isConcertSwap ? e.title : e.artist
+                          return (
+                            <>
+                              <div className="itemTitle">{displayTitle}</div>
+                              {displaySub ? <div className="itemSub">{displaySub}</div> : null}
+                            </>
+                          )
+                        })()}
 
                         <div className="itemBottom">
                           <div className="location">
@@ -545,8 +557,20 @@ function App() {
               )
             })()}
 
-            <div className="eventSheetTitle">{selectedEvent.title}</div>
-            {selectedEvent.artist ? <div className="eventSheetArtist">{selectedEvent.artist}</div> : null}
+            {(() => {
+              const isConcertSwap =
+                (selectedEvent.title.toLowerCase().includes('concierto') ||
+                  selectedEvent.title.toLowerCase().includes('festival puro cuento')) &&
+                !!selectedEvent.artist
+              const displayTitle = isConcertSwap ? selectedEvent.artist : selectedEvent.title
+              const displaySub = isConcertSwap ? selectedEvent.title : selectedEvent.artist
+              return (
+                <>
+                  <div className="eventSheetTitle">{displayTitle}</div>
+                  {displaySub ? <div className="eventSheetArtist">{displaySub}</div> : null}
+                </>
+              )
+            })()}
 
             <div className="eventSheetRow">
               <Icon path="M12 21s7-4.4 7-11a7 7 0 0 0-14 0c0 6.6 7 11 7 11Zm0-9a2 2 0 1 0 0-4a2 2 0 0 0 0 4Z" />
