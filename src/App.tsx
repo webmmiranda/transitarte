@@ -63,7 +63,12 @@ function App() {
   const [location, setLocation] = useState<string | 'all'>('all')
 
   const [openMap, setOpenMap] = useState<string | null>(null)
-  const [selectedEventId, setSelectedEventId] = useState<string | null>(null)
+  const [selectedEventId, setSelectedEventId] = useState<string | null>(() => {
+    if (typeof window !== 'undefined') {
+      return new URLSearchParams(window.location.search).get('event')
+    }
+    return null
+  })
   const [showInfo, setShowInfo] = useState(false)
   const [showInstall, setShowInstall] = useState(false)
 
@@ -184,6 +189,18 @@ function App() {
     URL.revokeObjectURL(url)
   }
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const url = new URL(window.location.href)
+      if (selectedEventId) {
+        url.searchParams.set('event', selectedEventId)
+      } else {
+        url.searchParams.delete('event')
+      }
+      window.history.replaceState({}, '', url)
+    }
+  }, [selectedEventId])
+
   const selectedEvent = useMemo(
     () => (selectedEventId ? events.find((e) => e.id === selectedEventId) ?? null : null),
     [events, selectedEventId],
@@ -235,14 +252,17 @@ function App() {
         await nav.share({ title, text, url })
         return
       }
-    } catch {
-      void 0
+    } catch (e: unknown) {
+      if (e && typeof e === 'object' && 'name' in e && (e as Error).name === 'AbortError') return
     }
 
     try {
       const clip = navigator.clipboard as Clipboard | undefined
-      if (clip) await clip.writeText(url)
-      return
+      if (clip) {
+        await clip.writeText(url)
+        alert('Enlace copiado al portapapeles')
+        return
+      }
     } catch {
       void 0
     }
