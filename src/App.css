@@ -223,7 +223,7 @@
 
 .results {
   padding: 14px 16px;
-  color: #ffffff;
+  color: #340762;
   font-weight: 900;
   background: #fff;
   border-bottom: 1px solid #eef0f3;
@@ -250,7 +250,6 @@
 .resultsInfo {
   width: 26px;
   height: 26px;
-  margin-right: 16px;
   border-radius: 999px;
   border: 1px solid rgba(96, 1, 119, 0.25);
   background: rgba(96, 1, 119, 0.06);
@@ -267,6 +266,28 @@
 }
 
 .resultsInfo svg {
+  display: block;
+}
+
+.resultsShare {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  border: 1px solid rgba(96, 1, 119, 0.25);
+  background: rgba(96, 1, 119, 0.06);
+  color: #340762;
+  font-weight: 900;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+
+.resultsShare:hover {
+  background: rgba(96, 1, 119, 0.1);
+}
+
+.resultsShare svg {
   display: block;
 }
 
@@ -1009,7 +1030,7 @@
 .eventSheetActions {
   margin-top: 14px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
 

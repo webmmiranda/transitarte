@@ -1,5 +1,6 @@
 import './App.css'
 import { useEffect, useMemo, useState, type CSSProperties } from 'react'
+import { Apple, Calendar, Info, Share2, Star } from 'lucide-react'
 import type { EventItem, FestivalDayKey } from './types'
 import { categoryMeta, categoryKeyFromLabel, CATEGORY_ORDER, normalizeKey } from './lib/categories'
 import { allFestivalDays, parseProgramacionText } from './lib/programacion'
@@ -176,7 +177,7 @@ function App() {
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = `Transitarte - ${event.title}.ics`
+    a.download = `SJ, Aquí - ${event.title}.ics`
     document.body.appendChild(a)
     a.click()
     a.remove()
@@ -184,11 +185,80 @@ function App() {
   }
 
   const selectedEvent = useMemo(
-    () => (selectedEventId ? filtered.find((e) => e.id === selectedEventId) ?? null : null),
-    [filtered, selectedEventId],
+    () => (selectedEventId ? events.find((e) => e.id === selectedEventId) ?? null : null),
+    [events, selectedEventId],
   )
 
   const canShowInstallEntry = !standalone && (canInstall || ios)
+
+  useEffect(() => {
+    try {
+      const id = new URL(window.location.href).searchParams.get('event')
+      if (id) {
+        setTab('agenda')
+        setShowInfo(false)
+        setSelectedEventId(id)
+      }
+    } catch {
+      void 0
+    }
+  }, [])
+
+  useEffect(() => {
+    try {
+      const url = new URL(window.location.href)
+      if (selectedEventId) url.searchParams.set('event', selectedEventId)
+      else url.searchParams.delete('event')
+      window.history.replaceState({}, '', url)
+    } catch {
+      void 0
+    }
+  }, [selectedEventId])
+
+  useEffect(() => {
+    const onPopState = () => {
+      try {
+        const id = new URL(window.location.href).searchParams.get('event')
+        setSelectedEventId(id)
+      } catch {
+        setSelectedEventId(null)
+      }
+    }
+    window.addEventListener('popstate', onPopState)
+    return () => window.removeEventListener('popstate', onPopState)
+  }, [])
+
+  const shareUrl = async (url: string, title: string, text?: string) => {
+    try {
+      const nav = navigator as Navigator & { share?: (data: { title?: string; text?: string; url?: string }) => Promise<void> }
+      if (typeof nav.share === 'function') {
+        await nav.share({ title, text, url })
+        return
+      }
+    } catch {
+      void 0
+    }
+
+    try {
+      const clip = navigator.clipboard as Clipboard | undefined
+      if (clip) await clip.writeText(url)
+      return
+    } catch {
+      void 0
+    }
+
+    window.prompt('Copiar enlace:', url)
+  }
+
+  const shareApp = async () => {
+    await shareUrl(window.location.origin + window.location.pathname, 'SJ, Aquí 26', 'Compartir la app')
+  }
+
+  const shareEvent = async (event: EventItem) => {
+    const url = new URL(window.location.origin + window.location.pathname)
+    url.searchParams.set('event', event.id)
+    await shareUrl(url.toString(), `SJ, Aquí · ${event.title}`, event.artist ?? undefined)
+  }
 
   return (
     <div className="app">
@@ -360,6 +430,12 @@ function App() {
             <>
               <div className="resultsRow">
                 <div className="results">{filtered.length} eventos encontrados</div>
+                <button className="resultsInfo" type="button" onClick={() => setShowInfo(true)} aria-label="Información">
+                  <Info size={18} />
+                </button>
+                <button className="resultsShare" type="button" onClick={shareApp} aria-label="Compartir app" title="Compartir app">
+                  <Share2 size={18} />
+                </button>
                 <button
                   className={favoritesOnly ? 'resultsFav resultsFavActive' : 'resultsFav'}
                   type="button"
@@ -367,16 +443,7 @@ function App() {
                   aria-label={favoritesOnly ? 'Mostrando favoritos' : 'Mostrar solo favoritos'}
                   title={favoritesOnly ? 'Mostrando favoritos' : 'Mostrar solo favoritos'}
                 >
-                  <Icon path={['M12 17.3l-6.2 3.6 1.6-7.1L2 8.9l7.2-.6L12 1.8l2.8 6.5 7.2.6-5.4 4.9 1.6 7.1L12 17.3Z']} />
-                </button>
-                <button className="resultsInfo" type="button" onClick={() => setShowInfo(true)} aria-label="Información">
-                  <Icon
-                    path={[
-                      'M12 22a10 10 0 1 0 0-20a10 10 0 0 0 0 20Z',
-                      'M12 10v6',
-                      'M12 7h.01',
-                    ]}
-                  />
+                  <Star size={18} fill={favoritesOnly ? 'currentColor' : 'none'} />
                 </button>
               </div>
 
@@ -444,7 +511,7 @@ function App() {
                               aria-label="Descargar Apple Calendar"
                               title="Descargar Apple Calendar"
                             >
-                              <Icon path="M16 13c0 3.9 3.4 5.2 3.4 5.2S18.7 21 16.2 21c-1.2 0-1.7-.8-2.9-.8s-1.8.8-3 .8C7.9 21 5 15.7 5 12.4 5 10 6.5 8.5 8.5 8.5c1.2 0 2.2.8 2.9.8c.7 0 1.8-.9 3.2-.9c.5 0 2 .1 3 1.5c-.1.1-1.8 1-1.8 3.1ZM14.8 6.9c.8-1 1.4-2.4 1.2-3.9c-1.2.1-2.6.8-3.4 1.8c-.8.9-1.4 2.3-1.2 3.6c1.3.1 2.6-.6 3.4-1.5Z" />
+                              <Apple size={18} />
                             </button>
 
                             {gcal ? (
@@ -458,13 +525,32 @@ function App() {
                                 onClick={(ev) => ev.stopPropagation()}
                                 onTouchEnd={(ev) => ev.stopPropagation()}
                               >
-                                <Icon path="M7 3v3m10-3v3M4 8h16M6 6h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" />
+                                <Calendar size={18} />
                               </a>
                             ) : (
                               <span className="iconAction iconActionDisabled" aria-hidden="true">
-                                <Icon path="M7 3v3m10-3v3M4 8h16M6 6h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" />
+                                <Calendar size={18} />
                               </span>
                             )}
+
+                            <button
+                              className="iconAction iconActionShare"
+                              type="button"
+                              onClick={(ev) => {
+                                ev.preventDefault()
+                                ev.stopPropagation()
+                                void shareEvent(e)
+                              }}
+                              onTouchEnd={(ev) => {
+                                ev.preventDefault()
+                                ev.stopPropagation()
+                                void shareEvent(e)
+                              }}
+                              aria-label="Compartir evento"
+                              title="Compartir evento"
+                            >
+                              <Share2 size={18} />
+                            </button>
 
                             <button
                               className={isFav ? 'iconAction iconActionFav iconActionFavActive' : 'iconAction iconActionFav'}
@@ -482,11 +568,7 @@ function App() {
                               aria-label={isFav ? 'Quitar de favoritos' : 'Guardar en favoritos'}
                               title={isFav ? 'Quitar de favoritos' : 'Guardar en favoritos'}
                             >
-                              <Icon
-                                path={
-                                  'M12 17.3l-6.2 3.6 1.6-7.1L2 8.9l7.2-.6L12 1.8l2.8 6.5 7.2.6-5.4 4.9 1.6 7.1L12 17.3Z'
-                                }
-                              />
+                              <Star size={18} fill={isFav ? 'currentColor' : 'none'} />
                             </button>
                           </div>
                         </div>
@@ -596,7 +678,7 @@ function App() {
                 aria-label="Descargar Apple Calendar"
                 title="Descargar Apple Calendar"
               >
-                <Icon path="M16 13c0 3.9 3.4 5.2 3.4 5.2S18.7 21 16.2 21c-1.2 0-1.7-.8-2.9-.8s-1.8.8-3 .8C7.9 21 5 15.7 5 12.4 5 10 6.5 8.5 8.5 8.5c1.2 0 2.2.8 2.9.8c.7 0 1.8-.9 3.2-.9c.5 0 2 .1 3 1.5c-.1.1-1.8 1-1.8 3.1ZM14.8 6.9c.8-1 1.4-2.4 1.2-3.9c-1.2.1-2.6.8-3.4 1.8c-.8.9-1.4 2.3-1.2 3.6c1.3.1 2.6-.6 3.4-1.5Z" />
+                <Apple size={18} />
               </button>
 
               {googleCalendarUrl(selectedEvent) ? (
@@ -608,13 +690,25 @@ function App() {
                   aria-label="Agregar a Google Calendar"
                   title="Agregar a Google Calendar"
                 >
-                  <Icon path="M7 3v3m10-3v3M4 8h16M6 6h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" />
+                  <Calendar size={18} />
                 </a>
               ) : (
                 <span className="ctaButton ctaDisabled iconAction" aria-hidden="true">
-                  <Icon path="M7 3v3m10-3v3M4 8h16M6 6h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" />
+                  <Calendar size={18} />
                 </span>
               )}
+
+              <button
+                className="ctaButton iconAction iconActionShare"
+                type="button"
+                onClick={() => {
+                  void shareEvent(selectedEvent)
+                }}
+                aria-label="Compartir evento"
+                title="Compartir evento"
+              >
+                <Share2 size={18} />
+              </button>
 
               <button
                 className={favorites.has(selectedEvent.id) ? 'ctaButton iconAction iconActionFav iconActionFavActive' : 'ctaButton iconAction iconActionFav'}
@@ -623,7 +717,7 @@ function App() {
                 aria-label={favorites.has(selectedEvent.id) ? 'Quitar de favoritos' : 'Guardar en favoritos'}
                 title={favorites.has(selectedEvent.id) ? 'Quitar de favoritos' : 'Guardar en favoritos'}
               >
-                <Icon path="M12 17.3l-6.2 3.6 1.6-7.1L2 8.9l7.2-.6L12 1.8l2.8 6.5 7.2.6-5.4 4.9 1.6 7.1L12 17.3Z" />
+                <Star size={18} fill={favorites.has(selectedEvent.id) ? 'currentColor' : 'none'} />
               </button>
             </div>
           </div>
