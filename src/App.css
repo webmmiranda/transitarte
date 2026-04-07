@@ -16,7 +16,7 @@
 }
 
 .header {
-  background: #600177;
+  background: #340762;
   padding: 12px 16px 14px;
   color: #ffffff;
   border-bottom: 0;
@@ -32,7 +32,7 @@
   gap: 12px;
   align-items: center;
   padding: calc(14px + env(safe-area-inset-top)) 16px 12px;
-  background: #600177;
+  background: #340762;
   border-bottom: 0;
 }
 
@@ -41,7 +41,7 @@
   font-weight: 950;
   letter-spacing: 0.4px;
   font-family: var(--font-display);
-  color: #fbae14;
+  color: #f8c305;
 }
 
 @media (max-width: 380px) {
@@ -77,8 +77,8 @@
 }
 
 .segButtonActive {
-  background: #fbae14;
-  color: #600177;
+  background: #f8c305;
+  color: #340762;
 }
 
 .installButton {
@@ -233,7 +233,7 @@
   border-radius: 999px;
   border: 1px solid rgba(96, 1, 119, 0.25);
   background: rgba(96, 1, 119, 0.06);
-  color: #600177;
+  color: #340762;
   font-weight: 900;
   cursor: pointer;
   display: grid;
@@ -255,7 +255,7 @@
   border-radius: 999px;
   border: 1px solid rgba(96, 1, 119, 0.25);
   background: rgba(96, 1, 119, 0.06);
-  color: #600177;
+  color: #340762;
   font-weight: 900;
   cursor: pointer;
   display: grid;
@@ -268,8 +268,8 @@
 }
 
 .resultsFavActive {
-  background: #600177;
-  color: #fbae14;
+  background: #340762;
+  color: #f8c305;
   border-color: rgba(96, 1, 119, 0.45);
 }
 
@@ -279,19 +279,19 @@
 
 /* Botón de favorito */
 .iconActionFavActive {
-  color: #FBAE14 !important;
+  color: #f8c305 !important;
   border-color: rgba(96, 1, 119, 0.35);
-  background: #600177 !important;
+  background: #340762 !important;
 }
 
 .iconActionFavActive svg {
-  fill: #FBAE14;
+  fill: #f8c305;
 }
 
 .ctaFav {
   grid-column: 1 / -1;
   background: #ffffff;
-  color: #600177;
+  color: #340762;
   border: 1px solid rgba(96, 1, 119, 0.22);
 }
 
@@ -300,8 +300,8 @@
 }
 
 .ctaFavActive {
-  background: #600177;
-  color: #fbae14;
+  background: #340762;
+  color: #f8c305;
   border-color: rgba(96, 1, 119, 0.4);
 }
 
@@ -309,7 +309,7 @@
   font-size: 11px;
   padding: 14px 16px 18px;
   color: rgba(255, 255, 255, 0.86);
-  background: #600177;
+  background: #340762;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -326,7 +326,7 @@
   border: 0;
   background: transparent;
   padding: 0;
-  color: #fbae14;
+  color: #f8c305;
   font-weight: 900;
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -374,8 +374,8 @@
   width: 44px;
   height: 44px;
   border-radius: 999px;
-  background: #600177;
-  color: #fbae14;
+  background: #340762;
+  color: #f8c305;
   display: grid;
   place-items: center;
   font-weight: 900;
@@ -403,8 +403,8 @@
   justify-content: center;
   border-radius: 14px;
   padding: 12px 12px;
-  background: #600177;
-  color: #fbae14;
+  background: #340762;
+  color: #f8c305;
   font-weight: 950;
   text-decoration: none;
 }
@@ -439,7 +439,7 @@
   border-radius: 14px;
   padding: 12px 10px;
   background: #ffffff;
-  color: #600177;
+  color: #340762;
   border: 1px solid rgba(96, 1, 119, 0.22);
   font-weight: 950;
   text-decoration: none;
@@ -478,7 +478,7 @@
 }
 
 .infoText a {
-  color: #600177;
+  color: #340762;
   text-decoration: underline;
   text-underline-offset: 2px;
   font-weight: 900;
@@ -535,8 +535,8 @@
   border-radius: 14px;
   padding: 12px 12px;
   border: 0;
-  background: #600177;
-  color: #fbae14;
+  background: #340762;
+  color: #f8c305;
   font-weight: 950;
   cursor: pointer;
 }
@@ -630,13 +630,13 @@
   font-size: 11px;
   font-weight: 900;
   letter-spacing: 0.5px;
-  color: #fbae14;
+  color: #f8c305;
   white-space: nowrap;
 }
 
 .catDay {
   font-size: 14px;
-  color: #600177;
+  color: #340762;
   font-weight: 800;
   white-space: nowrap;
 }
@@ -647,8 +647,8 @@
   gap: 8px;
   padding: 8px 10px;
   border-radius: 16px;
-  background: #600177;
-  color: #fbae14;
+  background: #340762;
+  color: #f8c305;
   font-weight: 950;
   font-size: 13px;
   white-space: nowrap;
@@ -893,7 +893,7 @@
   padding: 14px 14px;
   border-radius: 16px;
   border: 0;
-  background: linear-gradient(90deg, var(--cat, #600177), #600177);
+  background: linear-gradient(90deg, var(--cat, #340762), #340762);
   color: #ffffff;
 }
 
@@ -927,7 +927,7 @@
 
 .eventSheetCatLabel {
   font-weight: 950;
-  color: #fbae14;
+  color: #f8c305;
   letter-spacing: 0.2px;
 }
 

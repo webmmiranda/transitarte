@@ -14,7 +14,7 @@ export default defineConfig({
         short_name: 'Transitarte 26',
         description:
           'Agenda interactiva, búsqueda, filtros, mapas y acceso rápido para guardar eventos en tu calendario.',
-        theme_color: '#600177',
+        theme_color: '#340762',
         background_color: '#ffffff',
         display: 'standalone',
         start_url: '/',

@@ -180,7 +180,7 @@ function App() {
     <div className="app">
       <div className="phone">
         <div className="topBar">
-          <div className="headerTitle">TRANSITARTE '26</div>
+          <div className="headerTitle">San José, Aquí</div>
           <div className="headerRight">
             <div className="segmented" role="tablist" aria-label="Secciones">
               <button
