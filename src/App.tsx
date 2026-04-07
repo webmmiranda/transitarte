@@ -388,6 +388,12 @@ function App() {
                               className={isFav ? 'iconAction iconActionFav iconActionFavActive' : 'iconAction iconActionFav'}
                               type="button"
                               onClick={(ev) => {
+                                ev.preventDefault()
+                                ev.stopPropagation()
+                                toggleFavorite(e.id)
+                              }}
+                              onTouchEnd={(ev) => {
+                                ev.preventDefault()
                                 ev.stopPropagation()
                                 toggleFavorite(e.id)
                               }}
@@ -408,6 +414,7 @@ function App() {
                                 rel="noreferrer"
                                 aria-label="Agregar a Google Calendar"
                                 onClick={(ev) => ev.stopPropagation()}
+                                onTouchEnd={(ev) => ev.stopPropagation()}
                               >
                                 <Icon path="M7 3v3m10-3v3M4 8h16M6 6h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" />
                               </a>
@@ -421,6 +428,12 @@ function App() {
                               className="iconAction"
                               type="button"
                               onClick={(ev) => {
+                                ev.preventDefault()
+                                ev.stopPropagation()
+                                downloadAppleCalendar(e)
+                              }}
+                              onTouchEnd={(ev) => {
+                                ev.preventDefault()
                                 ev.stopPropagation()
                                 downloadAppleCalendar(e)
                               }}
