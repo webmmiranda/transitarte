@@ -59,6 +59,7 @@ function App() {
   const [query, setQuery] = useState('')
   const [day, setDay] = useState<FestivalDayKey | 'all'>('all')
   const [category, setCategory] = useState<string | 'all'>('all')
+  const [location, setLocation] = useState<string | 'all'>('all')
 
   const [openMap, setOpenMap] = useState<string | null>(null)
   const [selectedEventId, setSelectedEventId] = useState<string | null>(null)
@@ -121,6 +122,18 @@ function App() {
     return raw.sort((a, b) => (orderIndex.get(a.key) ?? 999) - (orderIndex.get(b.key) ?? 999))
   }, [events])
 
+  const locations = useMemo(() => {
+    const byKey = new Map<string, string>()
+    for (const e of events) {
+      if (!e.venue) continue
+      const key = normalizeKey(e.venue)
+      if (!byKey.has(key)) {
+        byKey.set(key, e.venue)
+      }
+    }
+    return Array.from(byKey.values()).sort((a, b) => a.localeCompare(b))
+  }, [events])
+
   const filtered = useMemo(() => {
     const q = normalizeKey(query)
     return events
@@ -128,6 +141,7 @@ function App() {
         if (favoritesOnly && !favorites.has(e.id)) return false
         if (day !== 'all' && e.date.key !== day) return false
         if (category !== 'all' && categoryKeyFromLabel(e.category) !== category) return false
+        if (location !== 'all' && normalizeKey(e.venue) !== normalizeKey(location)) return false
         if (!q) return true
         const haystack = normalizeKey(
           [e.title, e.artist, e.venue, e.description, e.category].filter(Boolean).join(' '),
@@ -140,7 +154,7 @@ function App() {
         if (aKey !== bKey) return aKey.localeCompare(bKey)
         return a.title.localeCompare(b.title)
       })
-  }, [events, query, day, category, favoritesOnly, favorites])
+  }, [events, query, day, category, location, favoritesOnly, favorites])
 
   const mapImages = useMemo(
     () => [
@@ -259,6 +273,19 @@ function App() {
                   {categories.map((c) => (
                     <option key={c.key} value={c.key}>
                       {categoryMeta(c.label).label}
+                    </option>
+                  ))}
+                </select>
+                <Icon path="M6 9l6 6l6-6" />
+              </label>
+
+              <label className="selectBox">
+                <span className="srOnly">Ubicación</span>
+                <select value={location} onChange={(e) => setLocation(e.target.value)}>
+                  <option value="all">Cualquier ubicación</option>
+                  {locations.map((loc) => (
+                    <option key={loc} value={loc}>
+                      {loc}
                     </option>
                   ))}
                 </select>
