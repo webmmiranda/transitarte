@@ -269,10 +269,15 @@
   color: rgba(96, 1, 119, 0.55);
 }
 
+/* Botón de favorito */
 .iconActionFavActive {
-  color: #fbae14;
+  color: #FBAE14 !important;
   border-color: rgba(96, 1, 119, 0.35);
-  background: #600177;
+  background: #600177 !important;
+}
+
+.iconActionFavActive svg {
+  fill: #FBAE14;
 }
 
 .ctaFav {
@@ -1040,5 +1045,30 @@
 
   .itemSub {
     font-size: 16px;
+  }
+}
+
+/* Layout Desktop */
+@media (min-width: 768px) {
+  #root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f0f0;
+    padding: 20px;
+  }
+  
+  .appContainer {
+    width: 100%;
+    max-width: 600px;
+    height: 90vh;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    overflow: hidden;
+  }
+  
+  .mainContent {
+    height: calc(100% - 150px); /* Ajuste según tamaño del header */
   }
 }
