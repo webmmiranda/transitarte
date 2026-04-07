@@ -10,10 +10,10 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'icons.svg'],
       manifest: {
-        name: 'Transitarte 26',
-        short_name: 'Transitarte 26',
+        name: 'SJ, Aquí 26',
+        short_name: 'SJ, Aquí 26',
         description:
-          'Agenda interactiva, búsqueda, filtros, mapas y acceso rápido para guardar eventos en tu calendario.',
+          'Agenda interactiva, búsqueda, filtros, mapas y acceso rápido para guardar eventos en tu calendario de SJ, Aquí.',
         theme_color: '#340762',
         background_color: '#ffffff',
         display: 'standalone',

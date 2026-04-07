@@ -81,14 +81,23 @@
   color: #340762;
 }
 
+.installButtonContainer {
+  padding: 12px 16px 0;
+  background: #340762;
+}
+
 .installButton {
+  width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.35);
-  background: rgba(255, 255, 255, 0.14);
+  background: transparent;
   color: #ffffff;
-  padding: 10px 12px;
-  border-radius: 16px;
-  font-weight: 800;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 10px 20px;
+  border-radius: 12px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .installButton:hover {

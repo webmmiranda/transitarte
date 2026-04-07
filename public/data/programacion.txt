@@ -10,7 +10,7 @@ He definido las siguientes columnas para que la información tenga sentido en un
 7. **Género / Subcategoría / Descripción:** Detalle del tipo de música, taller, o sinopsis.
 8. **Público Dirigido / Observaciones:** Edades, requisitos de inscripción, etc.
 
-### Programación Homogenizada - Transitarte 
+### Programación Homogenizada - SJ, Aquí 
 
 | Categoría Principal | Fecha | Lugar / Espacio | Horario | Actividad / Nombre del Evento | Artista / Grupo / Encargado | Género / Subcategoría / Descripción | Público Dirigido / Observaciones |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |

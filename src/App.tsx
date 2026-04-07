@@ -38,7 +38,7 @@ function App() {
 
   const [favoriteIds, setFavoriteIds] = useState<string[]>(() => {
     try {
-      const raw = localStorage.getItem('transitarte:favorites:v1')
+      const raw = localStorage.getItem('sjaqui:favorites:v1')
       if (!raw) return []
       const parsed = JSON.parse(raw) as unknown
       if (!Array.isArray(parsed)) return []
@@ -50,7 +50,7 @@ function App() {
   const favorites = useMemo(() => new Set(favoriteIds), [favoriteIds])
   const [favoritesOnly, setFavoritesOnly] = useState<boolean>(() => {
     try {
-      return localStorage.getItem('transitarte:favoritesOnly:v1') === '1'
+      return localStorage.getItem('sjaqui:favoritesOnly:v1') === '1'
     } catch {
       return false
     }
@@ -91,7 +91,7 @@ function App() {
 
   useEffect(() => {
     try {
-      localStorage.setItem('transitarte:favorites:v1', JSON.stringify(favoriteIds))
+      localStorage.setItem('sjaqui:favorites:v1', JSON.stringify(favoriteIds))
     } catch {
       // ignore
     }
@@ -99,7 +99,7 @@ function App() {
 
   useEffect(() => {
     try {
-      localStorage.setItem('transitarte:favoritesOnly:v1', favoritesOnly ? '1' : '0')
+      localStorage.setItem('sjaqui:favoritesOnly:v1', favoritesOnly ? '1' : '0')
     } catch {
       // ignore
     }
@@ -222,77 +222,81 @@ function App() {
                 Mapas
               </button>
             </div>
-            {canShowInstallEntry ? (
-              <button className="installButton" type="button" onClick={() => setShowInstall(true)}>
-                Instalar
-              </button>
-            ) : null}
           </div>
         </div>
 
         {!showInfo ? (
-          <header className="header">
-            <div className="searchBox">
-              <Icon path="M21 21l-4.3-4.3m1.8-5.2a7 7 0 1 1-14 0a7 7 0 0 1 14 0Z" />
-              <input
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Buscar eventos, artistas, lugares…"
-                inputMode="search"
-              />
-              {query ? (
-                <button
-                  className="clearButton"
-                  type="button"
-                  onClick={() => setQuery('')}
-                  aria-label="Limpiar búsqueda"
-                >
-                  <Icon path="M18 6L6 18M6 6l12 12" />
+          <>
+            {canShowInstallEntry ? (
+              <div className="installButtonContainer">
+                <button className="installButton" type="button" onClick={() => setShowInstall(true)}>
+                  Instalar aplicación
                 </button>
-              ) : null}
-            </div>
+              </div>
+            ) : null}
+            <header className="header">
+              <div className="searchBox">
+                <Icon path="M21 21l-4.3-4.3m1.8-5.2a7 7 0 1 1-14 0a7 7 0 0 1 14 0Z" />
+                <input
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  placeholder="Buscar eventos, artistas, lugares…"
+                  inputMode="search"
+                />
+                {query ? (
+                  <button
+                    className="clearButton"
+                    type="button"
+                    onClick={() => setQuery('')}
+                    aria-label="Limpiar búsqueda"
+                  >
+                    <Icon path="M18 6L6 18M6 6l12 12" />
+                  </button>
+                ) : null}
+              </div>
 
-            <div className="selectRow">
-              <label className="selectBox">
-                <span className="srOnly">Día</span>
-                <select value={day} onChange={(e) => setDay(e.target.value as FestivalDayKey | 'all')}>
-                  <option value="all">Cualquier día</option>
-                  {allFestivalDays().map((d) => (
-                    <option key={d.key} value={d.key}>
-                      {d.label}
-                    </option>
-                  ))}
-                </select>
-                <Icon path="M6 9l6 6l6-6" />
-              </label>
+              <div className="selectRow">
+                <label className="selectBox">
+                  <span className="srOnly">Día</span>
+                  <select value={day} onChange={(e) => setDay(e.target.value as FestivalDayKey | 'all')}>
+                    <option value="all">Cualquier día</option>
+                    {allFestivalDays().map((d) => (
+                      <option key={d.key} value={d.key}>
+                        {d.label}
+                      </option>
+                    ))}
+                  </select>
+                  <Icon path="M6 9l6 6l6-6" />
+                </label>
 
-              <label className="selectBox">
-                <span className="srOnly">Categoría</span>
-                <select value={category} onChange={(e) => setCategory(e.target.value)}>
-                  <option value="all">Todas las categorías</option>
-                  {categories.map((c) => (
-                    <option key={c.key} value={c.key}>
-                      {categoryMeta(c.label).label}
-                    </option>
-                  ))}
-                </select>
-                <Icon path="M6 9l6 6l6-6" />
-              </label>
+                <label className="selectBox">
+                  <span className="srOnly">Categoría</span>
+                  <select value={category} onChange={(e) => setCategory(e.target.value)}>
+                    <option value="all">Todas las categorías</option>
+                    {categories.map((c) => (
+                      <option key={c.key} value={c.key}>
+                        {categoryMeta(c.label).label}
+                      </option>
+                    ))}
+                  </select>
+                  <Icon path="M6 9l6 6l6-6" />
+                </label>
 
-              <label className="selectBox">
-                <span className="srOnly">Ubicación</span>
-                <select value={location} onChange={(e) => setLocation(e.target.value)}>
-                  <option value="all">Cualquier ubicación</option>
-                  {locations.map((loc) => (
-                    <option key={loc} value={loc}>
-                      {loc}
-                    </option>
-                  ))}
-                </select>
-                <Icon path="M6 9l6 6l6-6" />
-              </label>
-            </div>
-          </header>
+                <label className="selectBox">
+                  <span className="srOnly">Ubicación</span>
+                  <select value={location} onChange={(e) => setLocation(e.target.value)}>
+                    <option value="all">Cualquier ubicación</option>
+                    {locations.map((loc) => (
+                      <option key={loc} value={loc}>
+                        {loc}
+                      </option>
+                    ))}
+                  </select>
+                  <Icon path="M6 9l6 6l6-6" />
+                </label>
+              </div>
+            </header>
+          </>
         ) : null}
 
         <main className="main">
@@ -617,7 +621,7 @@ function App() {
         <div className="installModal">
           <div className="installHeader">
             <img className="installIcon" src="/favicon.svg" alt="" />
-            <div className="installTitle">Instalar Transitarte</div>
+            <div className="installTitle">Instalar SJ, Aquí</div>
           </div>
 
           {canInstall ? (
