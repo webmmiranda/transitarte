@@ -428,6 +428,45 @@ function App() {
                           </div>
                           <div className="actions">
                             <button
+                              className="iconAction"
+                              type="button"
+                              onClick={(ev) => {
+                                ev.preventDefault()
+                                ev.stopPropagation()
+                                downloadAppleCalendar(e)
+                              }}
+                              onTouchEnd={(ev) => {
+                                ev.preventDefault()
+                                ev.stopPropagation()
+                                downloadAppleCalendar(e)
+                              }}
+                              disabled={!e.startUtcIso}
+                              aria-label="Descargar Apple Calendar"
+                              title="Descargar Apple Calendar"
+                            >
+                              <Icon path="M16 13c0 3.9 3.4 5.2 3.4 5.2S18.7 21 16.2 21c-1.2 0-1.7-.8-2.9-.8s-1.8.8-3 .8C7.9 21 5 15.7 5 12.4 5 10 6.5 8.5 8.5 8.5c1.2 0 2.2.8 2.9.8c.7 0 1.8-.9 3.2-.9c.5 0 2 .1 3 1.5c-.1.1-1.8 1-1.8 3.1ZM14.8 6.9c.8-1 1.4-2.4 1.2-3.9c-1.2.1-2.6.8-3.4 1.8c-.8.9-1.4 2.3-1.2 3.6c1.3.1 2.6-.6 3.4-1.5Z" />
+                            </button>
+
+                            {gcal ? (
+                              <a
+                                className="iconAction"
+                                href={gcal}
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label="Agregar a Google Calendar"
+                                title="Agregar a Google Calendar"
+                                onClick={(ev) => ev.stopPropagation()}
+                                onTouchEnd={(ev) => ev.stopPropagation()}
+                              >
+                                <Icon path="M7 3v3m10-3v3M4 8h16M6 6h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" />
+                              </a>
+                            ) : (
+                              <span className="iconAction iconActionDisabled" aria-hidden="true">
+                                <Icon path="M7 3v3m10-3v3M4 8h16M6 6h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" />
+                              </span>
+                            )}
+
+                            <button
                               className={isFav ? 'iconAction iconActionFav iconActionFavActive' : 'iconAction iconActionFav'}
                               type="button"
                               onClick={(ev) => {
@@ -448,42 +487,6 @@ function App() {
                                   'M12 17.3l-6.2 3.6 1.6-7.1L2 8.9l7.2-.6L12 1.8l2.8 6.5 7.2.6-5.4 4.9 1.6 7.1L12 17.3Z'
                                 }
                               />
-                            </button>
-                            {gcal ? (
-                              <a
-                                className="iconAction"
-                                href={gcal}
-                                target="_blank"
-                                rel="noreferrer"
-                                aria-label="Agregar a Google Calendar"
-                                onClick={(ev) => ev.stopPropagation()}
-                                onTouchEnd={(ev) => ev.stopPropagation()}
-                              >
-                                <Icon path="M7 3v3m10-3v3M4 8h16M6 6h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" />
-                              </a>
-                            ) : (
-                              <span className="iconAction iconActionDisabled" aria-hidden="true">
-                                <Icon path="M7 3v3m10-3v3M4 8h16M6 6h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" />
-                              </span>
-                            )}
-
-                            <button
-                              className="iconAction"
-                              type="button"
-                              onClick={(ev) => {
-                                ev.preventDefault()
-                                ev.stopPropagation()
-                                downloadAppleCalendar(e)
-                              }}
-                              onTouchEnd={(ev) => {
-                                ev.preventDefault()
-                                ev.stopPropagation()
-                                downloadAppleCalendar(e)
-                              }}
-                              disabled={!e.startUtcIso}
-                              aria-label="Descargar Apple Calendar"
-                            >
-                              <Icon path="M16 13c0 3.9 3.4 5.2 3.4 5.2S18.7 21 16.2 21c-1.2 0-1.7-.8-2.9-.8s-1.8.8-3 .8C7.9 21 5 15.7 5 12.4 5 10 6.5 8.5 8.5 8.5c1.2 0 2.2.8 2.9.8c.7 0 1.8-.9 3.2-.9c.5 0 2 .1 3 1.5c-.1.1-1.8 1-1.8 3.1ZM14.8 6.9c.8-1 1.4-2.4 1.2-3.9c-1.2.1-2.6.8-3.4 1.8c-.8.9-1.4 2.3-1.2 3.6c1.3.1 2.6-.6 3.4-1.5Z" />
                             </button>
                           </div>
                         </div>
@@ -585,32 +588,42 @@ function App() {
             {selectedEvent.audience ? <div className="eventSheetHint">{selectedEvent.audience}</div> : null}
 
             <div className="eventSheetActions">
-              {googleCalendarUrl(selectedEvent) ? (
-                <a
-                  className="ctaButton"
-                  href={googleCalendarUrl(selectedEvent)!}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Google Calendar
-                </a>
-              ) : (
-                <span className="ctaButton ctaDisabled">Google Calendar</span>
-              )}
               <button
-                className="ctaButton"
+                className="ctaButton iconAction"
                 type="button"
                 onClick={() => downloadAppleCalendar(selectedEvent)}
                 disabled={!selectedEvent.startUtcIso}
+                aria-label="Descargar Apple Calendar"
+                title="Descargar Apple Calendar"
               >
-                Apple Calendar
+                <Icon path="M16 13c0 3.9 3.4 5.2 3.4 5.2S18.7 21 16.2 21c-1.2 0-1.7-.8-2.9-.8s-1.8.8-3 .8C7.9 21 5 15.7 5 12.4 5 10 6.5 8.5 8.5 8.5c1.2 0 2.2.8 2.9.8c.7 0 1.8-.9 3.2-.9c.5 0 2 .1 3 1.5c-.1.1-1.8 1-1.8 3.1ZM14.8 6.9c.8-1 1.4-2.4 1.2-3.9c-1.2.1-2.6.8-3.4 1.8c-.8.9-1.4 2.3-1.2 3.6c1.3.1 2.6-.6 3.4-1.5Z" />
               </button>
+
+              {googleCalendarUrl(selectedEvent) ? (
+                <a
+                  className="ctaButton iconAction"
+                  href={googleCalendarUrl(selectedEvent)!}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Agregar a Google Calendar"
+                  title="Agregar a Google Calendar"
+                >
+                  <Icon path="M7 3v3m10-3v3M4 8h16M6 6h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" />
+                </a>
+              ) : (
+                <span className="ctaButton ctaDisabled iconAction" aria-hidden="true">
+                  <Icon path="M7 3v3m10-3v3M4 8h16M6 6h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" />
+                </span>
+              )}
+
               <button
-                className={favorites.has(selectedEvent.id) ? 'ctaButton ctaFav ctaFavActive' : 'ctaButton ctaFav'}
+                className={favorites.has(selectedEvent.id) ? 'ctaButton iconAction iconActionFav iconActionFavActive' : 'ctaButton iconAction iconActionFav'}
                 type="button"
                 onClick={() => toggleFavorite(selectedEvent.id)}
+                aria-label={favorites.has(selectedEvent.id) ? 'Quitar de favoritos' : 'Guardar en favoritos'}
+                title={favorites.has(selectedEvent.id) ? 'Quitar de favoritos' : 'Guardar en favoritos'}
               >
-                {favorites.has(selectedEvent.id) ? 'En favoritos' : 'Guardar'}
+                <Icon path="M12 17.3l-6.2 3.6 1.6-7.1L2 8.9l7.2-.6L12 1.8l2.8 6.5 7.2.6-5.4 4.9 1.6 7.1L12 17.3Z" />
               </button>
             </div>
           </div>

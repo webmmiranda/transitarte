@@ -15,11 +15,18 @@
 
 body {
   margin: 0;
-  background: #ffffff;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #340761;
 }
 
 #root {
-  min-height: 100svh;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  background: #340761;
 }
 
 button,
